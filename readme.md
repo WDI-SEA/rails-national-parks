@@ -16,7 +16,7 @@ Let's create an app to showcase these wonderful parks.
 * A `Park` model that stores the following attributes. Choose the appropriate data types for each (`string` or `text`)
   * `name`
   * `description`
-  * `picture`
+  * `picture` (for now, have this store a URL to a picture of a park)
 
 ### Controllers
 
