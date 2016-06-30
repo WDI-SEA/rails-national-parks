@@ -61,7 +61,7 @@ Let's create an app to showcase these wonderful parks.
     * `Park.new`
     * `Park.find`
 * Create functionality
-  * Add routes to `routes.rb`. Use `resource` to create a set of RESTful CRUD routes
+  * Add routes to `routes.rb`. Use `resources` to create a set of RESTful CRUD routes
   * Add controllers, actions, and views where appropriate
   * Add functionality for each controller action
   * Test as needed
