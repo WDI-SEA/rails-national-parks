@@ -68,6 +68,12 @@ Let's create an app to showcase these wonderful parks.
 
 ## Styling
 
-* Style the home page. Play around with adding a navigation bar or carousels.
+* Style the pages. Play around with adding a navigation bar or carousels.
 * If using Bootstrap, use the [Bootstrap form helper](https://github.com/bootstrap-ruby/rails-bootstrap-forms). Makes Bootstrap forms easily.
 
+## Bonuses
+
+* Create a seed file to load some National Parks
+* Replace the URL links with Cloudinary uploads.
+  * [Cloudinary Gem](https://github.com/cloudinary/cloudinary_gem)
+  * [Cloudinary Upload Notes](https://wdi_sea.gitbooks.io/notes/content/06-ruby-rails/additional-topics/rails-cloudinary/readme.html)
