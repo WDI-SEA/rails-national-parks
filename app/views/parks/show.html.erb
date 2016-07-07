@@ -1,0 +1,17 @@
+<h1><%= @park.name %></h1>
+<p>Find me in app/views/parks/show.html.erb</p>
+
+
+
+<h2><%= @park.description %> </h2>
+<h2><%= @park.picture %> </h2>
+
+
+
+
+
+<%= link_to('Back to Home', parks_path) %>
+<%= link_to('Edit Park', edit_park_path) %>
+<%= link_to 'Delete this Park', park_path, method: :delete %>
+
+
