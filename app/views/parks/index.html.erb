@@ -1,0 +1,8 @@
+<h1>United States National Parks</h1>
+
+<%= link_to('Add a Park', new_park_path)%>
+<% @parks.each do |park| %>
+  <h4><%= link_to(park.name, park_path(park))%></h4>
+  <p><%= park.description %></p>
+  <p><%= park.picture %></p>
+<% end %>
