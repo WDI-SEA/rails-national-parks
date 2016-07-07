@@ -1,0 +1,9 @@
+<h1>List of Sweet National Parks</h1>
+
+<%= link_to("Add a Park", new_park_path) %>
+
+<% @parks.each do |park| %>
+  <h2><%= link_to(park.name, park_path(park)) %></h2>
+  <p><%= park.picture %></p>
+  <hr>
+<% end %>

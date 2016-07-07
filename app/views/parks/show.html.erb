@@ -1,0 +1,10 @@
+<h1><%= @parks.name %></h1>
+<p><%= @parks.picture %></p>
+<p><%= @parks.description %></p>
+
+<%= link_to('Edit Park', edit_park_path) %>
+
+<%= link_to("Back to Park List", parks_path) %>
+<br>
+
+<%= link_to("Delete", @parks, method: :delete) %>

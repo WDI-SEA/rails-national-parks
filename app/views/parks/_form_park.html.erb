@@ -1,0 +1,14 @@
+<%= form_for @park do |p| %>
+
+  <%= p.label :name %>
+  <%= p.text_field :name %>
+
+  <%= p.label :description %>
+  <%= p.text_area :description %>
+
+  <%= p.label :picture %>
+  <%= p.text_field :picture %>
+
+  <%= p.submit %>
+
+<% end %>
