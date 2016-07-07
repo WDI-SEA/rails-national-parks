@@ -1,0 +1,14 @@
+<h1>Parks#new</h1>
+<p>Find me in app/views/parks/new.html.erb</p>
+
+<%= form_for(@parks) do |p| %>
+  <%= p.label :name %>
+  <%= p.text_area :name %>
+
+  <%= p.label :description %>
+  <%= p.text_area :description %>
+  <%= p.submit %>
+
+  <%= link_to('Back Home', parks_path) %>
+
+<% end %>

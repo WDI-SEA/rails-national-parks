@@ -1,0 +1,8 @@
+<h1>National Parks</h1>
+<p>Find me in app/views/parks/index.html.erb</p>
+
+<%= link_to('New Parks', new_park_path) %>
+
+<% @parks.each do |park| %>
+  <h2><%= link_to(park.name, park_path(park)) %></h2>
+<% end %>
