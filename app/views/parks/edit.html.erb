@@ -1,0 +1,12 @@
+<h1>Parks#edit</h1>
+<p>Find me in app/views/parks/edit.html.erb</p>
+
+<%= form_for(@park) do |p| %>
+  <%= p.label :name %>
+  <%= p.text_field :name %>
+
+  <%= p.label :description %>
+  <%= p.text_area :description %>
+
+  <%= p.submit %>
+<% end %>
