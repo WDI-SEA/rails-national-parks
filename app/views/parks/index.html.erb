@@ -1,7 +1,7 @@
 <h1>National Parks</h1>
 
 
-<%= link_to('New Parks', new_park_path) %>
+<%= link_to('New Parks', new_park_path, class: "btn btn-primary") %>
 
 <% @parks.each do |park| %>
   <h2><%= link_to(park.name, park_path(park)) %></h2>
