@@ -1,5 +1,4 @@
 <%= @park.name %>
-<img src='<%= @park.picture %>'>
 <%= @park.description %>
-
+<%= cl_image_tag(@park.picture) %>
 <%= link_to 'Back to Home', parks_path %>

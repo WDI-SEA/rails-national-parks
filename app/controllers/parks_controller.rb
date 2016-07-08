@@ -5,7 +5,11 @@ class ParksController < ApplicationController
 
   def create
     Park.create(park_params)
+    uploaded_file = params[:park][:picture].path
+    cloudinary_file = Cloudinary::Uploader.upload(uploaded_file)
+    # render cloudinary_file['public_id']
     redirect_to parks_path
+    # render json: cloudnary_file
   end
 
   def new
