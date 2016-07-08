@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  text-align: center;
+  background-image: url("paper.jpg");
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  border: 2px black solid;
+  border-radius: 100px;
+  box-shadow: 10px -5px 10px #555
+}
+
+.nav {
+  width:50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: rgba(100,100,100,0.3)
+}
+
+h3 {
+  display: inline-block;
+  margin: 30px;
+}

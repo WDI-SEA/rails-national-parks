@@ -1,7 +1,11 @@
-<h1>Parks#index</h1>
-<p>Find me in app/views/parks/index.html.erb</p>
+<h1>List of parks</h1>
+<!-- <p>Find me in app/views/parks/index.html.erb</p> -->
 
-<%= link_to('New Park', new_park_path) %>
+<div class="logoDiv">
+  <img class="logo"src="/NPS.png">
+</div>
+
+<%= link_to('Add a New Park', new_park_path) %>
 
 <% @parks.each do |park| %>
   <h2><%= link_to(park.name, park_path(park)) %></h2>

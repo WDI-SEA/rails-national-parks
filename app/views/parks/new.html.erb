@@ -1,5 +1,9 @@
-<h1>Parks#new</h1>
-<p>Find me in app/views/parks/new.html.erb</p>
+<h1>Create a new park</h1>
+<!-- <p>Find me in app/views/parks/new.html.erb</p> -->
+
+<div class="logoDiv">
+  <img class="logo"src="/NPS.png">
+</div>
 
 <%= form_for(@park) do |p| %>
   <%= p.label :name %>
@@ -8,5 +12,13 @@
   <%= p.label :description %>
   <%= p.text_area :description %>
 
+  <%= p.label :picture_URL %>
+  <%= p.text_field :picture %>
+
   <%= p.submit %>
+
+<div class="nav">
+  <h3><%= link_to('Back Home', parks_path) %></h3>
+</div>
+
 <% end %>

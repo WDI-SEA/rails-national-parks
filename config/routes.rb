@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
-  root 'parks#index'
+  root 'main#index'
+
   resources :parks
 
-  # get 'parks/index'
 
-  # get 'parks/show'
-
-  # get 'parks/edit'
-
-  # get 'parks/new'
+#Allows me to link from /views/main/index to /views/parks/index
+  get "/rails-national-parks/app/controllers/parks_controller.rb", to: "parks#index", as: "index"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

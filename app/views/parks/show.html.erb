@@ -1,10 +1,13 @@
-<h1>Parks#show</h1>
-<p>Find me in app/views/parks/show.html.erb</p>
+<div class="logoDiv">
+  <img class="logo"src="/NPS.png">
+</div>
 
 <h1><%= @park.name %></h1>
 <h2><%= @park.description %></h2>
+<img src="<%= @park.picture %>">
 
-<%= link_to("Delete", park_path, method: :delete) %>
-<%= link_to('Edit Park', edit_park_path) %>
-<%= link_to('Back Home', parks_path) %>
-
+<div class="nav">
+  <h3><%= link_to("Delete", park_path, method: :delete) %></h3>
+  <h3><%= link_to('Edit Park', edit_park_path) %></h3>
+  <h3><%= link_to('Back Home', parks_path) %></h3>
+</div>
