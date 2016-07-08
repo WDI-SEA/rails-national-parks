@@ -1,0 +1,13 @@
+<div class="container">
+  
+
+<%= bootstrap_form_for(@park) do |f| %>
+  <%= f.text_field :name %>
+
+  <%= f.text_area :description %>
+
+  <%= f.text_field :url %>
+
+  <%= f.primary %>
+<% end -%>
+</div>
