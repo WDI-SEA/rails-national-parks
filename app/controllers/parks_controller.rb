@@ -4,6 +4,7 @@ class ParksController < ApplicationController
   end
 
   def new
+    @park = Park.new
   end
 
   def show
@@ -18,9 +19,17 @@ class ParksController < ApplicationController
 
   def create
     # No view - redirect after creating
+    Park.create(park_params)
+    redirect_to parks_path
   end
 
   def destroy
     # No view - redirect after destroying
+  end
+
+  private
+
+  def park_params
+    params.require(:park).permit(:name, :description, :picture)
   end
 end
