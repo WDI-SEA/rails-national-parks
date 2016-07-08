@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-# # carrier wave
-# gem 'carrierwave'
+gem 'bootstrap-sass', '~> 3.3.6'
 # Cloudinary
 gem 'cloudinary'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,4 +1,5 @@
-<%= @park.name %>
-<%= @park.description %>
-<%= cl_image_tag(@park.picture) %>
-<%= link_to 'Back to Home', parks_path %>
+<h1><%= @park.name %></h1>
+<h4><%= @park.description %></h4>
+<div><%= cl_image_tag(@park.picture) %></div>
+
+<div><%= link_to 'Back to Home', parks_path %></div>
