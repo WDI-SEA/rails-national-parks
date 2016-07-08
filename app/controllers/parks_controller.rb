@@ -12,9 +12,12 @@ class ParksController < ApplicationController
   end
 
   def edit
+    @park = Park.find(params[:id])
   end
 
   def update
+    @park = Park.find(params[:id]).update(park_params)
+    redirect_to parks_path
   end
 
   def create
@@ -25,6 +28,8 @@ class ParksController < ApplicationController
 
   def destroy
     # No view - redirect after destroying
+    Park.find(params[:id]).delete
+    redirect_to parks_path
   end
 
   private
