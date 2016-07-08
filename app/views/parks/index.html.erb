@@ -1,12 +1,9 @@
-<h1>US National Parks</h1>
-<p>Find me in app/views/parks/index.html.erb</p>
-
-
-<%= link_to('New Parks', new_park_path) %>
-
+<h1 class="header">US National Parks</h1>
 
 
 <% @parks.each do |park| %>
-<h2><%= link_to(park.name, park_path(park)) %> </h2>
+<div class ="well header">
+	<h2><%= link_to(park.name, park_path(park)) %> </h2>
+</div>
 <% end %>
 

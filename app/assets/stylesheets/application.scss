@@ -14,6 +14,32 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body { 
+body {
 	padding-top: 70px; 
+  	background: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=aa53c60c3a22cd9fe83ed23bdcad5a86') no-repeat center center fixed;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	font-family: 'Cinzel Decorative', cursive;
+	text-align: center;
 }
+
+.header {
+	color: white;
+}
+
+.well {
+	background: rgba(255,255,255,0.8);
+}
+
+.btnPadding {
+	margin: 0 20px;
+}
+
+
+
+
+
+
+

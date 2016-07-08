@@ -1,18 +1,15 @@
-<h1>Parks#edit</h1>
-<p>Find me in app/views/parks/edit.html.erb</p>
+<h1 class="header">Park Edit</h1>
 
 
 <%= form_for(@park) do |p| %>
-	<%= p.label :name %>
-	<%= p.text_area :name %>
+	<%= p.label :name, class:"header" %></br>
+	<%= p.text_area :name %></br>
 
-	<%= p.label :description %>
-	<%= p.text_area :description %>
+	<%= p.label :description, class:"header" %></br>
+	<%= p.text_area :description %></br>
 
-	<%= p.label :picture %>
-	<%= p.text_area :picture %>
+	<%= p.label :picture, class:"header" %></br>
+	<%= p.text_area :picture %></br>
 
-	<%= p.submit %>
+	<%= p.submit class:"btn btn-primary"%>
 <% end %>
-
-<%= link_to('Back to Home', parks_path) %>
