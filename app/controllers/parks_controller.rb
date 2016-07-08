@@ -36,5 +36,4 @@ class ParksController < ApplicationController
   def park_params
     params.require(:park).permit(:name, :description)
   end
-
 end
