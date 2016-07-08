@@ -12,10 +12,11 @@
  *
 
  */
+
+ /*
+ *= require rails_bootstrap_forms
+ */
+ 
+@import "parks";
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-body {
-    background-color: gray;
-    text-align: center;
-}

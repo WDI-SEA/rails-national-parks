@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap_form'
 gem 'bootstrap-sass', '~> 3.3.6'
 # Cloudinary
 gem 'cloudinary'
