@@ -1,3 +1,116 @@
-<h1>National Parks Finder</h1>
+<div class="mainPage">
+  <div class="titleBox">
+    <h1>National Parks Finder</h1>
 
-<p>Find information about national parks, including descriptions and pictures.</p>
+    <p>Find information about national parks, including descriptions and pictures.</p>
+
+    <div class="viewParks">
+      <%= link_to 'View Parks', {controller: "parks", action: "index"}, class: "btn btn-success" %>
+    </div>
+  </div>
+</div>
+
+<!-- Code below is the HTML for the picture carousel on main page -->
+
+<!-- <div id="photoCarousel" class="carousel slide" data-ride="carousel"> -->
+  <!-- Indicators -->
+ <!--  <ol class="carousel-indicators">
+    <li data-target="#photoCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#photoCarousel" data-slide-to="1"></li>
+    <li data-target="#photoCarousel" data-slide-to="2"></li>
+    <li data-target="#photoCarousel" data-slide-to="3"></li>
+  </ol> -->
+
+  <!-- Wrapper for slides -->
+ <!--  <div class="carousel-inner">
+    <div class="item active">
+      <img src="http://www.thecanyon.com/assets/css/images/grandcanyon1.jpg" alt="Picture of Grand Canyon">
+    </div>
+    <div class="item">
+      <img src="https://media.deseretdigital.com/file/34840f5751?type=image/jpeg&c=14&a=4c9873e9" alt="Picture of Zion">
+    </div>
+    <div class="item">
+      <img src="http://puckettexcursions.com/wp-content/uploads/2016/01/Yellowstone-Teton-Elk-Sunset.jpg" alt="Picture of Yellowstone">
+    </div>
+    <div class="item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Mount_Rainier_from_Paradise.jpg" alt="Picture of Mount Rainier">
+    </div>
+  </div> -->
+
+  <!-- Controls -->
+  <!-- <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> -->
+
+<!-- Code below is for helper file carousel_helper.rb, for picture carousel on main page -->
+
+<!-- # module Carousel_helper
+#   def carousel_for(images)
+#     Carousel.new(self, images).html
+#   end
+
+#   class Carousel
+#     def initialize(view, images)
+#       @view, @images = view, images
+#       @uid = SecureRandom.hex(6)
+#     end
+
+#     def html
+#       content = safe_join([indicators, slides, controls])
+#       content_tag(:div, content, id: uid, class: 'carousel slide')
+#     end
+
+#     private
+
+#     attr_accessor :view, :images, :uid
+#     delegate :link_to, :content_tag, :image_tag, :safe_join, to: :view
+
+#     def indicators
+#       items = images.count.times.map { |index| indicator_tag(index) }
+#       content_tag(:ol, safe_join(items), class: 'carousel-indicators')
+#     end
+
+#     def indicator_tag(index)
+#       options = {
+#         class: (index.zero? ? 'active' : ''),
+#         data: { 
+#           target: uid, 
+#           slide_to: index
+#         }
+#       }
+
+#       content_tag(:li, '', options)
+#     end
+
+#     def slides
+#       items = images.map.with_index { |image, index| slide_tag(image, index.zero?) }
+#       content_tag(:div, safe_join(items), class: 'carousel-inner')
+#     end
+
+#     def slide_tag(image, is_active)
+#       options = {
+#         class: (is_active ? 'item active' : 'item'),
+#       }
+
+#       content_tag(:div, image_tag(image), options)
+#     end
+
+#     def controls
+#       safe_join([control_tag('left'), control_tag('right')])
+#     end
+
+#     def control_tag(direction)
+#       options = {
+#         class: "#{direction} carousel-control",
+#         data: { slide: direction == 'left' ? 'prev' : 'next' }
+#       }
+
+#       icon = content_tag(:i, '', class: "glyphicon glyphicon-chevron-#{direction}")
+#       control = link_to(icon, "##{uid}", options)
+#     end
+#   end
+# end -->
