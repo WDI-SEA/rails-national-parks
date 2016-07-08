@@ -1,0 +1,14 @@
+<h1 class="header">Create a New Park</h1>
+
+<%= form_for(@park) do |p| %>
+	<%= p.label :name, class:"header" %></br>
+	<%= p.text_area :name, class:"text-area", size:"30x1" %></br>
+
+	<%= p.label :description, class:"header" %></br>
+	<%= p.text_area :description, class:"text-description", size:"30x7" %></br>
+
+	<%= p.label :picture, class:"header" %></br>
+	<%= p.text_area :picture, class:"text-picture", size:"30x1" %></br>
+	</br>
+	<%= p.submit class:"btn btn-primary"%>
+<% end %>

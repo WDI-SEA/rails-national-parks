@@ -1,0 +1,9 @@
+<h1 class="header">US National Parks</h1>
+
+
+<% @parks.each do |park| %>
+<div class ="well header">
+	<h2><%= link_to(park.name, park_path(park)) %> </h2>
+</div>
+<% end %>
+
