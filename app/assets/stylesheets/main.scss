@@ -1,3 +1,73 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.index {
+  height: 100%;
+  margin: 0 0 0 40px;
+}
+
+
+.container {
+  margin: 40px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+form {
+  display:flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+.row {
+  display:flex;
+  height: 60px;
+  justify-content:flex-start;
+  align-items:center;
+  width: 270px;
+}
+
+label {
+  margin: 10px 10px 10px 0;
+  width: 100px;
+}
+
+h1{
+  font-size: 4em;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+nav {
+  width: 100%;
+  display:block;
+  text-align:right;
+}
+
+.park {
+  width: 40%;
+  padding: 40px;
+}
+
+.picture {
+  display:flex;
+  justify-content:space-between;
+  margin: 40px 0;
+}
