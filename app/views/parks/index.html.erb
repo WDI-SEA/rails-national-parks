@@ -1,9 +1,19 @@
-<h1>List of Sweet National Parks</h1>
-
-<%= link_to("Add a Park", new_park_path) %>
-
-<% @parks.each do |park| %>
-  <h2><%= link_to(park.name, park_path(park)) %></h2>
-  <p><%= park.picture %></p>
-  <hr>
-<% end %>
+<div class="container">
+  <div class="header">
+    <h1 class="inline header">List of Sweet National Parks</h1>
+    <button class="inline pull-right"><%= link_to("Add a Park", new_park_path) %></button>
+  </div>
+    <div class="row">
+      <% @parks.each do |park| %>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <!-- <div class="picture-frame"> -->
+            <img class="picture" src="<%= park.picture %>">
+          <!-- </div> -->
+          <h2 style="text-align: center"><%= link_to(park.name, park_path(park)) %></h2>
+          <hr>
+        </div>
+      </div>
+      <% end %>
+    </div>
+</div>

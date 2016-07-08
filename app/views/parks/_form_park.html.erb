@@ -1,14 +1,21 @@
-<%= form_for @park do |p| %>
 
-  <%= p.label :name %>
-  <%= p.text_field :name %>
-
-  <%= p.label :description %>
-  <%= p.text_area :description %>
-
-  <%= p.label :picture %>
-  <%= p.text_field :picture %>
-
-  <%= p.submit %>
-
-<% end %>
+  <%= form_for @park do |p| %>
+    <div class="form">
+      <%= p.label :name %>
+      <p class="input"> <%= p.text_field :name %></p>
+    </div>
+    <div class="form">
+      <%= p.label :description %>
+    </div>
+    <div class="form">
+      <p class="input"><%= p.text_area :description %></p>
+    </div>
+    <div class="form">
+      <%= p.label :picture %>
+      <p class="input"> <%= p.text_field :picture %></p>
+    </div>
+    <ul>
+      <li class="inline"><%= p.submit %></li>
+      <li class="inline btn"><a href="/parks">Cancel</a></li>
+    </ul>
+  <% end %>
