@@ -1,0 +1,15 @@
+<div class="container">
+  
+
+<%= bootstrap_form_for(@park) do |f| %>
+  <%= f.text_field :name %>
+
+  <%= f.text_area :description %>
+
+  <%= f.text_field :url %>
+
+  <%= f.primary %>
+  <%= link_to('Back to Parks', parks_path, class: 'btn btn-success') %>
+<% end -%>
+
+</div>

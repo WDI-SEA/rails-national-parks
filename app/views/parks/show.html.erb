@@ -1,0 +1,13 @@
+<div class="container">
+  
+<h1><%= @park.name %></h1>
+<p><%= @park.description %></p>
+<img src='<%= @park.url %>' alt="">
+
+</div>
+<br>
+<div class="container">
+  <%= link_to('Back to Parks', parks_path, class: 'btn btn-success') %>
+  <%= link_to('Edit Parks', edit_park_path, class: 'btn btn-primary') %>
+  <%= link_to('Delete Parks', park_path(@park), method: :delete, class: 'btn btn-danger') %>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  
+
+<h1>All National Parks</h1>
+<p>Please enjoy the vast selection of national parks.</p>
+
+<%= link_to('Add New Park', new_park_path, class: 'btn btn-primary') %>
+
+<% @parks.each do |park| %>  
+
+<h2 class="well"><%= link_to(park.name, park_path(park)) %></h2>
+  
+<% end %>
+</div>
