@@ -1,0 +1,10 @@
+<h1>Parks#show</h1>
+<p>Find me in app/views/parks/show.html.erb</p>
+
+<h2><%= @park.name %></h2>
+
+<p><%= @park.description %></p>
+
+<img src="<%= @park.picture  %>" alt="picture of <%= @park.name %>">
+
+<%= link_to('Back to Home', parks_path) %>
