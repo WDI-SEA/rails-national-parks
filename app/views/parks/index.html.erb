@@ -1,0 +1,10 @@
+<h1>Parks#index</h1>
+<p>Find me in app/views/parks/index.html.erb</p>
+
+<%= link_to('Add a Park', new_park_path) %>
+
+<% @parks.each do |park| %>
+  <hr/>
+  <h2 class="parkName"><%= link_to(park.name, park_path(park)) %></h2>
+  <img src="<%=  park.picture %>" alt="Picture of <%= park.name %>" class="parkImage">
+<% end %>
