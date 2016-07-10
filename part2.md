@@ -10,7 +10,7 @@
 | POST /rangers | create ranger | rangers | create (no view) |
 | GET /rangers/1 | list ranger and the parks the ranger works at (id=1) | rangers | show |
 | GET /rangers/2/edit | show edit ranger form (id=2) | rangers | edit |
-| PUT /rangers/3 | update an existing ranger (id=3) | rangers | update |
+| PUT /rangers/3 | update an existing ranger (id=3) | rangers | update (no view) |
 | DELETE /rangers/3 | delete an existing ranger (id=3) | parks | destroy (no view) |
 
 ##Bonus
