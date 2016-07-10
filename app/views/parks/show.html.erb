@@ -1,0 +1,9 @@
+<h1>Individual Parks</h1>
+
+<h3><%= @parks.name %></h3>
+<h4><%= @parks.description %></h4>
+
+<%= link_to('Back Home', parks_path, class: "btn btn-primary") %>
+<%= link_to('Edit Parks', edit_park_path, class: "btn btn-primary") %>
+<%= link_to('Fuck this Park', park_path, method: :delete, class: "btn btn-danger") %>
+

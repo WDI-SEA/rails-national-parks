@@ -1,0 +1,15 @@
+<h1>Enter a new Park</h1>
+
+<div class="well">
+  <%= form_for(@parks) do |p| %>
+    <%= p.label :name %>
+    <%= p.text_field :name %>
+
+    <%= p.label :description %>
+    <%= p.text_area :description %>
+    <%= p.submit class: "btn btn-primary"%>
+
+    <%= link_to('Back Home', parks_path) %>
+
+  <% end %>
+</div>
