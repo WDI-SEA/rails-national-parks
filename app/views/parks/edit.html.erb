@@ -1,0 +1,13 @@
+<h1><%= @park.name %></h1>
+<p>Update the information for this park below</p>
+
+<hr/>
+
+<%= bootstrap_form_for(@park) do |p| %>
+  <%= p.text_field :name %>
+
+  <%= p.text_area :description %>
+
+  <%= p.text_field :picture %>
+  <%= p.submit "Submit Park", class: 'btn btn-success' %>
+<% end %>

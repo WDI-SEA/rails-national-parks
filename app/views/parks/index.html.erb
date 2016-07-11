@@ -1,0 +1,12 @@
+<h1>National Parks</h1>
+<p>A list of beautiful natural wonders for you to visit</p>
+<div class="addPark">
+  <%= link_to 'Add a Park', {controller: "parks", action: "new"}, class: "btn btn-success" %>
+</div>
+<% @parks.each do |park| %>
+  <hr/>
+  <div class="parkBlock container-fluid">
+    <h2 class="parkName"><%= link_to(park.name, park_path(park)) %></h2>
+    <img src="<%= park.picture %>" alt="Picture of <%= park.name %>" class="parkThumbImg">
+  </div>
+<% end %>
