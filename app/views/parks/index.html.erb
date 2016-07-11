@@ -1,0 +1,10 @@
+<h1>All Parks</h1>
+
+<% @parks.each do |element| %>
+    <h2><%= element.name %></h2>
+    <%= link_to "View this Park", park_path(element) %>
+    <%= link_to "Delete", park_path(element), method: :delete %>
+    <%= link_to "Edit", edit_park_path(element) %>
+<% end %>
+
+<%= link_to 'Create A Park', new_park_path(@parks) %>

@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dzcy6ewty
+  api_key: '566988178887742'
+  api_secret: 1co7qKJLDIVPuiBbbouLXL86ap8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dzcy6ewty
+  api_key: '566988178887742'
+  api_secret: 1co7qKJLDIVPuiBbbouLXL86ap8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dzcy6ewty
+  api_key: '566988178887742'
+  api_secret: 1co7qKJLDIVPuiBbbouLXL86ap8
+  enhance_image_tag: true
+  static_image_support: false
