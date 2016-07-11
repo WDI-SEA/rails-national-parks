@@ -1,0 +1,13 @@
+<div class="well">
+  <h1>Parks</h1>
+  <h3><%= link_to('add new park', new_park_path) %></h3>
+</div>
+
+<% @parks.each do |park| %>
+  <div class="well">
+    <h2><%= park.name %></h2>
+    <h3><%= link_to('this park', park_path(park)) %></h3>
+    <h3><%= link_to('delete', park_path(park), method: :delete) %></h3>
+    <img src=<%= park.picture %> >
+  </div>
+<% end %>
