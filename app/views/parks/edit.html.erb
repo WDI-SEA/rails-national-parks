@@ -1,0 +1,24 @@
+<h1>Edit this park</h1>
+<!-- <p>Find me in app/views/parks/edit.html.erb</p> -->
+
+<div class="logoDiv">
+  <img class="logo"src="/NPS.png">
+</div>
+
+<%= form_for(@park) do |p| %>
+  <%= p.label :name %>
+  <%= p.text_field :name %>
+
+  <%= p.label :description %>
+  <%= p.text_area :description %>
+
+  <%= p.label :picture %>
+  <%= p.text_field :picture %>
+
+  <%= p.submit %>
+
+<div class="nav">
+  <h3><%= link_to('Back Home', parks_path) %></h3>
+</div>
+
+<% end %>
