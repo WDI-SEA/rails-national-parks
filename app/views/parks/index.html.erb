@@ -1,0 +1,10 @@
+<h1>Parks#index</h1>
+<p>Find me in app/views/parks/index.html.erb</p>
+
+
+<%= link_to('new park', new_park_path) %>
+<% @parks.each do |park| %>
+<h2><%= park.name %></h2>
+  <h2><%= link_to("park content", park_path(park)) %></h2>
+  <h2><%= link_to("edit park", edit_park_path(park)) %></h2>
+  <% end %>
