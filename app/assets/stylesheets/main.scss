@@ -1,0 +1,64 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.navigation {
+  background-color: #795548;
+  padding: 15px 15px;
+  margin-bottom: 20px;
+}
+.navigation a {
+  background-color: #EFEBE9;
+}
+// .pic {
+//   heigh: 500px;
+//   background-image: url("http://www.oddcities.com/wp-content/uploads/2015/04/23_1mountain_lakes__glacier_national_park__montana.jpg");
+//   background-repeat: none;
+//   background-size: cover;
+// }
+// .jumbotron {
+//   opacity: 0.5;
+// }
+// .jumbotron h2 {
+//   opacity: 1 !important;
+// }
+// .jumbo{
+//   background-color:gray;
+//   opacity: 0.2;
+// }
+// .jumbo h2 {
+//   color:white;
+// }
+.container {
+  background-color: white;
+}
+.header {
+  margin-bottom: 30px;
+}
+.title {
+  text-align: center;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.inline {
+  display: inline;
+}
+.description {
+  margin-top: 20px;
+}
+.picture-frame {
+  width: auto auto;
+}
+.picture {
+  display: block;
+  width: 50%;
+  height: 50%;
+  margin: auto auto;
+}
+.form {
+  margin: 5px 5px;
+}
+.input { 
+  width: 400px;
+}
