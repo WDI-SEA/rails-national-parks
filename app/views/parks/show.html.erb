@@ -1,0 +1,12 @@
+<nav>
+  <button><%= link_to('Park List', parks_path) %></button>
+</nav>
+<div class="park">
+<h1><%= @park.name %></h1>
+<div class="picture">
+<p><%= @park.description %></p>
+<p><%= @park.picture %></p>
+</div>
+<button><%= link_to('Edit', edit_park_path) %></button>
+<button><%= link_to('Delete', @park, method: :delete) %></button>
+</div>
