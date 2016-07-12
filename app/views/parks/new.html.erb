@@ -1,11 +1,11 @@
 <h1>Enter a new Park</h1>
 
 <div class="well">
-  <%= form_for(@parks) do |p| %>
-    <%= p.label :name %>
+  <%= bootstrap_form_for(@parks) do |p| %>
     <%= p.text_field :name %>
 
-    <%= p.label :description %>
+    <%= p.collection_check_boxes(:ranger_ids, @rangers, :id, :name) %>
+
     <%= p.text_area :description %>
     <%= p.submit class: "btn btn-primary"%>
 

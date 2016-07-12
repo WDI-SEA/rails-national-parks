@@ -18,6 +18,7 @@ class ParksController < ApplicationController
 
   def new
     @parks = Park.new
+    @rangers = Ranger.all
   end
 
   def update
@@ -34,6 +35,6 @@ class ParksController < ApplicationController
   private
 
   def park_params
-    params.require(:park).permit(:name, :description)
+    params.require(:park).permit(:name, :description, :picture, :ranger_ids => [])
   end
 end
