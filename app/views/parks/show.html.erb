@@ -9,10 +9,20 @@
 
 <h3 class="header">Picture Link</h3>
 <div class="well">
-	<p><%= @park.picture %> </p>
+	<p><%= image_tag @park.picture, width: "100%" %> </p>
 </div>
 
-<%= render "application/partials/footer" %>
+<div class="well">
+<h2>Rangers</h2>
+<ul>
+
+<% @park.rangers.each do |ranger| %>
+	<li><%= ranger.name %></li>
+</ul>
+<% end %>
+</div>
+
+<!-- <%= render "application/partials/footer" %> -->
 <%= link_to('Edit This Park', edit_park_path, class:"btn btn-primary header btnPadding") %>
 <%= link_to('Delete this Park', park_path, class:"btn btn-danger header btnPadding", method: :delete) %>
 
