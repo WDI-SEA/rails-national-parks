@@ -9,6 +9,8 @@
 
   <%= p.text_area :description, hide_label: true, placeholder: "Description of park" %>
 
+  <%= p.collection_check_boxes(:ranger_ids, @rangers, :id, :name) %>
+
   <%= p.text_field :picture, hide_label: true, placeholder: "Link an image" %>
   <%= p.submit "Submit Park", class: 'btn btn-success' %>
 <% end %>

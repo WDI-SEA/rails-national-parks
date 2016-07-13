@@ -1,0 +1,9 @@
+<h1>National Park Rangers</h1>
+
+<hr/>
+
+<% @rangers.each do |r| %>
+  <h3><%= r.name %></h3>
+  <p>Ranger for <%= r.years %> years</p>
+  <hr/>
+<% end %>
