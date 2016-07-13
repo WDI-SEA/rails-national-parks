@@ -1,4 +1,4 @@
-class RangerController < ApplicationController
+class RangersController < ApplicationController
   def index
     @rangers = Ranger.all
   end
@@ -12,7 +12,7 @@ class RangerController < ApplicationController
     ranger = Ranger.new(ranger_params)
     if ranger.save
       flash[:success] = "Created a new ranger"
-      redirect_to ranger_index_path
+      redirect_to rangers_path
     else
       flash[:danger] = "Failed to create a new ranger"
       redirect_to new_ranger
@@ -20,9 +20,9 @@ class RangerController < ApplicationController
   end
 
   def update
-    ranger = Ranger.new(ranger_params)
+    ranger = Ranger.find(params[:id])
     ranger.update(ranger_params)
-    redirect_to ranger_index_path
+    redirect_to ranger_path
   end
 
   def edit
