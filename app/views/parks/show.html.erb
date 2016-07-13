@@ -17,7 +17,7 @@
 
 
 <% @park.rangers.each do |ranger| %>
-	<p><%= ranger.name %></p>
+	<p><%= link_to(ranger.name, ranger_path) %></p>
 
 <% end %>
 </div>
