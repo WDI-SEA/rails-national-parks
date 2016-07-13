@@ -12,6 +12,8 @@
   <%= p.label :description %>
   <%= p.text_area :description %>
 
+  <%= p.collection_check_boxes(:ranger_ids, @rangers, :id , :name) %>
+
   <%= p.label :picture_URL %>
   <%= p.text_field :picture %>
 

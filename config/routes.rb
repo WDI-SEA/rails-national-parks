@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root 'main#index'
 
-  resources :parks
 
+  resources :parks
+  resources :rangers
 
 #Allows me to link from /views/main/index to /views/parks/index
   get "/rails-national-parks/app/controllers/parks_controller.rb", to: "parks#index", as: "index"

@@ -1,0 +1,9 @@
+<h1>Rangers</h1>
+
+<%= link_to('Add a New Ranger', new_ranger_path) %>
+
+<% @rangers.each do |ranger| %>
+  <h2><%= link_to(ranger.name, ranger_path(ranger)) %></h2>
+<% end %>
+
+<h3><%= link_to('Back Home', parks_path) %></h3>

@@ -1,0 +1,12 @@
+<h1>Edit this ranger</h1>
+
+<%= form_for(@ranger) do |r| %>
+  <%= r.label :name %>
+  <%= r.text_field :name %>
+
+  <%= r.label :years %>
+  <%= r.text_area :years %>
+
+  <%= r.submit %>
+
+<% end %>

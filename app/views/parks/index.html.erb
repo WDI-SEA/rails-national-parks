@@ -7,6 +7,9 @@
 
 <%= link_to('Add a New Park', new_park_path) %>
 
+<%= link_to('List of Rangers', rangers_path) %>
+
+
 <% @parks.each do |park| %>
   <h2><%= link_to(park.name, park_path(park)) %></h2>
 <% end %>
