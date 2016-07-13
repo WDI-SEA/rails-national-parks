@@ -1,0 +1,8 @@
+<h1>All the rangers</h1>
+
+<% @rangers.each do |ranger| %>
+  <h2><%= link_to(ranger.name, ranger_path(ranger)) %></h2>
+  <p><%= ranger.years %></p>
+  <%= link_to('Remove ranger', ranger_path(ranger), method: :delete) %><br>
+
+<% end %>

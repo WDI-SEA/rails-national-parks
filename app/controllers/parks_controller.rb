@@ -11,10 +11,12 @@ class ParksController < ApplicationController
 
   def new
     @park = Park.new
+    @rangers = Ranger.all
   end
 
   def edit
     @park = Park.find(params[:id])
+    @rangers = Ranger.all
   end
 
   def show
@@ -36,7 +38,7 @@ class ParksController < ApplicationController
   private
 
   def park_params
-    params.require(:park).permit(:name, :description)
+    params.require(:park).permit(:name, :description, :ranger_ids => [])
   end
 
 end
