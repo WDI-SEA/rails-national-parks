@@ -1,0 +1,16 @@
+<div class="container">
+  
+<h1><%= @ranger.name %></h1>
+<p>Years of Service: <%= @ranger.years %></p> <br>
+<h4>Parks Serviced by Ranger:</h4>
+<% @ranger.parks.each do |park| %>
+  <li><%= park.name %></li>
+  <% end %>
+
+</div>
+<br>
+<div class="container">
+  <%= link_to('Back to Rangers', rangers_path, class: 'btn btn-success') %>
+  <%= link_to('Edit Ranger', edit_ranger_path, class: 'btn btn-primary') %>
+  <%= link_to('Delete Ranger', ranger_path(@ranger), method: :delete, class: 'btn btn-danger') %>
+</div>
