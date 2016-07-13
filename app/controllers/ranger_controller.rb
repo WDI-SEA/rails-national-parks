@@ -21,14 +21,8 @@ class RangerController < ApplicationController
 
   def update
     ranger = Ranger.new(ranger_params)
-    ranger.id = params[:id]
-    if ranger.save
-      flash[:success] = "Created a new ranger"
-      redirect_to ranger_index_path
-    else
-      flash[:danger] = "Failed to create a new ranger"
-      redirect_to new_ranger
-    end
+    ranger.update(ranger_params)
+    redirect_to ranger_index_path
   end
 
   def edit
