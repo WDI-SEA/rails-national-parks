@@ -1,7 +1,12 @@
+<div class="index">
+<nav>
+  <button><%= link_to('Park List', parks_path) %></button>
+</nav>
 <h1>Rangers</h1>
 <button><%= link_to('Add A Ranger', 'rangers/new') %></button>
 <% @rangers.each do |ranger| %>
 <h2><%= link_to(ranger.name, ranger_path(ranger))%><span> <%=ranger.year%> years</span>
 </h2>
 <% end %>
+</div>
 

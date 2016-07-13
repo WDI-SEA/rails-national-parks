@@ -1,3 +1,7 @@
+<nav>
+  <button><%= link_to('Park List', parks_path) %></button>
+  <button><%= link_to('Ranger List', rangers_path) %></button>
+</nav>
 <h1><%=@ranger.name%></h1>
 <h2><%=@ranger.year%> years</h2>
 <ul>
@@ -5,5 +9,5 @@
 <li><%= park.name %></li>
 <% end %>
 </ul>
-<%= link_to('Edit Ranger', 'edit_ranger_path') %>
+<button><%= link_to('Edit Ranger', edit_ranger_path) %></button>
 

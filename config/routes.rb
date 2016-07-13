@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'rangers/:id/edit', to: 'rangers#edit', as: 'edit_ranger'
 
-  post 'rangers/:id', to: 'rangers#update'
+  put 'rangers/:id', to: 'rangers#update'
 
   delete 'rangers/:id', to: 'rangers#destroy'
 
