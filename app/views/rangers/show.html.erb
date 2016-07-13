@@ -1,12 +1,9 @@
-<h1 class="header">Ranger</h1>
+<h1 class="header"><%= @ranger.name %></h1>
 <p>Find me in app/views/rangers/show.html.erb</p>
 
-<div class="header">
-<%= @ranger.name %>
-
-<% @ranger.parks.each do |p| %>
-	<%= p.name %>
+	<% @ranger.parks.each do |p| %>
+	<h1 class="header"><%= p.name %></h2>
 
 <% end %>
 
-</div>
+<%= link_to('Edit This Ranger', edit_ranger_path, class:"btn btn-primary header btnPadding") %>

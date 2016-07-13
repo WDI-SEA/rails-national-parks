@@ -1,2 +1,18 @@
-<h1>Rangers#edit</h1>
+<h1 class="header">Edit <%= @ranger.name %></h1>
 <p>Find me in app/views/rangers/edit.html.erb</p>
+
+
+
+<%= form_for(@ranger) do |r| %>
+	<%= r.label :name, class:"header" %></br>
+	<%= r.text_area :name, size:"30x1" %></br>
+
+	<%= r.label :years, class:"header" %></br>
+	<%= r.text_area :years, class:"text-area", size:"5x1" %></br>
+
+	<div class="linebreak"><%= r.collection_check_boxes(:park_ids, @park, :id, :name) %></div>
+
+	<%= r.submit 'Update Ranger', class:"btn btn-primary" %>
+	<%= link_to('Delete this Ranger', ranger_path, class:"btn btn-danger header btnPadding", method: :delete) %>
+
+<% end %>

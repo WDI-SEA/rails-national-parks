@@ -2,7 +2,7 @@
 <p>Find me in app/views/rangers/index.html.erb</p>
 
 
-<% @rangers.each do |ranger| %>
-	<p class="header"><%= ranger.name %></p>
+<% @rangers.each do |r| %>
+	<h2><%= link_to(r.name, ranger_path(r)) %></h2>
 	<% end %>
 

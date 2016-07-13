@@ -15,13 +15,19 @@ class RangersController < ApplicationController
 
   def edit
   	@ranger = Ranger.find(params[:id])
-  	
+  	@park = Park.all
+
 
   end
 
   def create
   	Ranger.create(ranger_params)
   	redirect_to parks_path
+  end
+
+  def destroy
+  	Ranger.find(params[:id]).destroy
+  	redirect_to rangers_path
   end
 
   def ranger_params
