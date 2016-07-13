@@ -9,6 +9,7 @@ class ParksController < ApplicationController
 
   def edit
 	@park = Park.find(params[:id])
+  @rangers = Ranger.all
   end
 
   def create

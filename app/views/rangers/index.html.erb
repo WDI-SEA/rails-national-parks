@@ -1,8 +1,11 @@
 <h1 class="header">The Rangers</h1>
-<p>Find me in app/views/rangers/index.html.erb</p>
 
+<%= link_to('New Ranger', new_ranger_path, class:"header btn btn-primary") %>
+
+</br>
+</br>
 
 <% @rangers.each do |r| %>
-	<h2><%= link_to(r.name, ranger_path(r)) %></h2>
+	<div class="well"><h2><%= link_to(r.name, ranger_path(r)) %></h2></div>
 	<% end %>
 

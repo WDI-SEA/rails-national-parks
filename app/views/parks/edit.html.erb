@@ -11,5 +11,7 @@
 	<%= p.label :picture, class:"header" %></br>
 	<%= p.text_area :picture, size:"30x1" %></br>
 
+	<div class="linebreak"><%= p.collection_check_boxes(:ranger_ids, @rangers, :id, :name) %></div></br>
+
 	<%= p.submit class:"btn btn-primary"%>
 <% end %>

@@ -7,7 +7,7 @@
 	<%= p.label :description, class:"header" %></br>
 	<%= p.text_area :description, class:"text-description", size:"30x7" %></br>
 
-	<%= p.collection_check_boxes(:ranger_ids, @rangers, :id, :name) %>
+	<div class="linebreak"><%= p.collection_check_boxes(:ranger_ids, @rangers, :id, :name) %></div></br>
 
 
 	<%= p.label :picture, class:"header" %></br>

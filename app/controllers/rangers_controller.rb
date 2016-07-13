@@ -25,6 +25,12 @@ class RangersController < ApplicationController
   	redirect_to parks_path
   end
 
+  def update
+  	r = Ranger.find(params[:id])
+  	r.update(ranger_params)
+  	redirect_to ranger_path
+  end
+
   def destroy
   	Ranger.find(params[:id]).destroy
   	redirect_to rangers_path
