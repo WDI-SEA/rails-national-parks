@@ -1,2 +1,7 @@
-<h1>Rangers#show</h1>
-<p>Find me in app/views/rangers/show.html.erb</p>
+<h1><%= @ranger.name %></h1>
+<p>Has been a ranger for <%= @ranger.years %> years</p>
+
+<h3>Ranger at:</h3>
+<% @ranger.parks.each do |park| %>
+  <h3><%= park.name %></h3>
+<% end %>

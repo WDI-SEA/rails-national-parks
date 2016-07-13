@@ -2,8 +2,8 @@
 
 <hr/>
 
-<% @rangers.each do |r| %>
-  <h3><%= r.name %></h3>
-  <p>Ranger for <%= r.years %> years</p>
+<% @rangers.each do |ranger| %>
+  <h3><a href="/rangers/<%= ranger.id %>"><%= ranger.name %></a></h3>
+  <p>Ranger for <%= ranger.years %> years</p>
   <hr/>
 <% end %>

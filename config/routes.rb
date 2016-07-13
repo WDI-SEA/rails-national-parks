@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "main#index"
   
+  # resources :rangers
+  
   get 'rangers/new', to: 'rangers#new'
   get '/rangers', to: 'rangers#index'
   post '/rangers', to: 'rangers#create'

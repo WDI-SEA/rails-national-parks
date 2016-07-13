@@ -9,9 +9,11 @@ class RangersController < ApplicationController
   end
 
   def show
+    @ranger = Ranger.find(params[:id])
   end
 
   def edit
+    @ranger = Ranger.find(params[:id])
   end
 
   def create
