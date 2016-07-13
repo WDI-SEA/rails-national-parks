@@ -11,10 +11,11 @@ Rails.application.routes.draw do
 
   get 'rangers/:id', to: 'rangers#show', as: 'ranger'
 
-
   get 'rangers/:id/edit', to: 'rangers#edit', as: 'edit_ranger'
 
   patch 'rangers/:id', to: 'rangers#update'
+
+  put 'rangers/:id', to: 'rangers#update'
 
   delete 'rangers/:id', to: 'rangers#destroy'
 

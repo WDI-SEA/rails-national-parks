@@ -2,14 +2,14 @@ class RangersController < ApplicationController
   def index
     @rangers = Ranger.all
   end
+  
+  def show
+    @ranger = Ranger.find(params[:id])
+  end
 
   def new
     @ranger = Ranger.new
     @parks = Park.all
-  end
-
-  def show
-    @ranger = Ranger.find(params[:id])
   end
 
   def create
@@ -24,7 +24,7 @@ class RangersController < ApplicationController
 
   def update
     Ranger.find(params[:id]).update(ranger_params)
-    redirect_to ranger_path(params[:id])
+    redirect_to ranger_path
   end
 
   def destroy

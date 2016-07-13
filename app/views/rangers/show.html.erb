@@ -9,5 +9,7 @@
 <li><%= park.name %></li>
 <% end %>
 </ul>
-<button><%= link_to('Edit Ranger', edit_ranger_path) %></button>
+<div>
+<button><%= link_to('Edit', edit_ranger_path) %></button>
 <button><%= link_to('Delete', @ranger, method: :delete) %></button>
+</div>
