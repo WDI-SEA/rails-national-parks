@@ -1,0 +1,12 @@
+<h1 class="header">Ranger</h1>
+<p>Find me in app/views/rangers/show.html.erb</p>
+
+<div class="header">
+<%= @ranger.name %>
+
+<% @ranger.parks.each do |p| %>
+	<%= p.name %>
+
+<% end %>
+
+</div>
