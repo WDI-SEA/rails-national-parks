@@ -1,0 +1,11 @@
+<%= form_for(@ranger) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :years %>
+  <%= f.text_field :years %>
+  
+  
+  <%= f.submit %>
+<% end %>
+
+<%= link_to('List of All Rangers', ranger_index_path) %>
