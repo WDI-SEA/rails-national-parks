@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'rangers', to: 'rangers#index'
+
+  get 'rangers/new', to: 'rangers#new'
+
+  get 'rangers/:id', to: 'rangers#show', as: 'ranger'
+
+  post 'rangers', to: 'rangers#create'
+
+  get 'rangers/:id/edit', to: 'rangers#edit', as: 'edit_ranger'
+
+  post 'rangers/:id', to: 'rangers#update'
+
+  delete 'rangers/:id', to: 'rangers#destroy'
+
   resources :parks
 
   root 'main#index'

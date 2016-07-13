@@ -5,7 +5,11 @@
 <h1><%= @park.name %></h1>
 <div class="picture">
 <p><%= @park.description %></p>
-<p><%= @park.picture %></p>
+<p><%= image_tag @park.picture, width: "100%" %></p>
+<ul><% @park.rangers.each do |ranger| %>
+  <li><%=ranger.name%></li>
+  <% end %>
+</ul>
 </div>
 <button><%= link_to('Edit', edit_park_path) %></button>
 <button><%= link_to('Delete', @park, method: :delete) %></button>
