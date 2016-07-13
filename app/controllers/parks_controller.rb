@@ -5,6 +5,9 @@ class ParksController < ApplicationController
 
   def show
     @parks = Park.find(params[:id])
+    parkRanger = ParksRangers.find_by(park_id: params[:id])
+    @rangers  = Ranger.find(parkRanger['ranger_id'])
+
   end
 
   def edit
@@ -28,7 +31,7 @@ class ParksController < ApplicationController
   end
 
   def destroy
-    Park.find(params[:id]).delete
+    Park.find(params[:id]).destroy
     redirect_to parks_path
   end
 

@@ -1,0 +1,14 @@
+<h1>Apply to be a Ranger</h1>
+
+<div class="well">
+  <%= bootstrap_form_for(:rangers) do |r| %>
+    <%= r.text_field :name %>
+
+    <%= r.text_field :years %>
+
+    <%= r.submit class: "btn btn-primary"%>
+
+    <%= link_to('Back Home', parks_path) %>
+
+  <% end %>
+</div>

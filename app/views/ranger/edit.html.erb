@@ -1,0 +1,18 @@
+<h1>Individual Ranger</h1>
+
+<h2><%= @rangers.name %></h2>
+<h3><%= @rangers.years %></h3>
+
+<div class="well">
+  <%= bootstrap_form_for(:rangers) do |p| %>
+    <%= p.text_field :name %>
+
+    <%= p.text_area :years %>
+
+    <%= p.submit class: "btn btn-primary" %>
+
+    <%= link_to('Back Home', parks_path, class: "btn btn-primary") %>
+
+  <% end %>
+</div>
+
