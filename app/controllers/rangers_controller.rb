@@ -18,13 +18,18 @@ class RangersController < ApplicationController
   end
 
   def edit
-    @ranger = Ranger.new
+    @ranger = Ranger.find(params[:id])
     @parks = Park.all
   end
 
   def update
     Ranger.find(params[:id]).update(ranger_params)
     redirect_to ranger_path(params[:id])
+  end
+
+  def destroy
+    Ranger.find(params[:id]).destroy
+    redirect_to rangers_path
   end
 
   private
