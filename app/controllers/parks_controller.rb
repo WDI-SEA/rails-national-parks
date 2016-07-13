@@ -25,11 +25,11 @@ class ParksController < ApplicationController
   def update
   	p = Park.find(params[:id])
   	p.update(park_params)
-  	redirect_to parks_path
+  	redirect_to park_path
   end
 
   def destroy
-    Park.find(params[:id]).delete
+    Park.find(params[:id]).destroy
     redirect_to parks_path
   end
 
