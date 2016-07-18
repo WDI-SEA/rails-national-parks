@@ -1,0 +1,15 @@
+<h1>Create a new Ranger</h1>
+<p>Know of a Ranger we missed?</p>
+<p>Add them to our database!</p>
+
+<hr/>
+
+<%= bootstrap_form_for(@ranger) do |r| %>
+  <%= r.text_field :name, hide_label: true, placeholder: "Name of Ranger" %>
+
+  <%= r.number_field :years, hide_label: true, placeholder: "Years of Experience" %>
+
+  <%= r.collection_check_boxes :park_ids, @parks, :id, :name, label: false %>
+
+  <%= r.submit "Submit Ranger", class: 'btn btn-success' %>
+<% end %>

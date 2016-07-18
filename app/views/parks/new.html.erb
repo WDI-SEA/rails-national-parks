@@ -1,0 +1,16 @@
+<h1>Add a Park</h1>
+<p>We don't have all of our amazing national parks added to our database, yet.</p>
+<p>Thanks for helping us out!</p>
+
+<hr/>
+
+<%= bootstrap_form_for(@park) do |p| %>
+  <%= p.text_field :name, hide_label: true, placeholder: "Name of Park" %>
+
+  <%= p.text_area :description, hide_label: true, placeholder: "Description of park" %>
+
+  <%= p.collection_check_boxes :ranger_ids, @rangers, :id, :name, label: false %>
+
+  <%= p.text_field :picture, hide_label: true, placeholder: "Link an image" %>
+  <%= p.submit "Submit Park", class: 'btn btn-success' %>
+<% end %>

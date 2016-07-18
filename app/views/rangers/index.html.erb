@@ -1,0 +1,9 @@
+<h1>National Park Rangers</h1>
+
+<hr/>
+
+<% @rangers.each do |ranger| %>
+  <h3><a href="/rangers/<%= ranger.id %>"><%= ranger.name %></a></h3>
+  <p>Ranger for <%= ranger.years %> years</p>
+  <hr/>
+<% end %>

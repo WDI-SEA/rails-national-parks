@@ -1,0 +1,7 @@
+<h1><%= @ranger.name %></h1>
+<p>Has been a ranger for <%= @ranger.years %> years</p>
+
+<h3>Ranger at:</h3>
+<% @ranger.parks.each do |park| %>
+  <h3><%= park.name %></h3>
+<% end %>

@@ -1,0 +1,12 @@
+<h1><%= @park.name %></h1>
+<hr/>
+<img src="<%= @park.picture %>" alt="Picture of <%= @park.name %>" class="parkFullImg">
+<p><%= @park.description %></p>
+<% @park.rangers.each do |ranger|  %>
+  <p><%= ranger.name %></p>
+<% end %>
+<hr/>
+<%= link_to('Back to Parks', parks_path, class: 'btn btn-info') %>
+<%= link_to('Edit this Park', edit_park_path, class: 'btn btn-success') %>
+<%= link_to('Delete this Park', park_path, method: :delete, class: 'btn btn-danger') %>
+
