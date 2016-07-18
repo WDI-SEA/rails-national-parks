@@ -1,0 +1,14 @@
+<div class="container">
+  
+
+<h1>All National Rangers</h1>
+<p>These are the fine folks that maintain and secure our natioanl parks.</p>
+
+<%= link_to('Add New Ranger', new_ranger_path, class: 'btn btn-primary') %>
+
+<% @rangers.each do |ranger| %>  
+
+<h2 class="well"><%= link_to(ranger.name, ranger_path(ranger)) %></h2>
+  
+<% end %>
+</div>

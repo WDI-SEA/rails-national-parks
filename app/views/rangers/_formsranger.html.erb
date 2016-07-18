@@ -1,0 +1,13 @@
+<div class="container">
+  <%= bootstrap_form_for(@ranger) do |f| %>
+    <%= f.text_field :name %>
+
+    <%= f.text_field :years %>
+
+    <%= f.collection_check_boxes(:park_ids, @parks, :id, :name) %>
+
+    <%= f.primary %>
+    <%= link_to('Back to Rangers', rangers_path, class: 'btn btn-primary') %>
+  <% end -%>
+
+</div>
