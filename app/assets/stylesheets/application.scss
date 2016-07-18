@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	padding-top: 70px; 
+  	background: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=aa53c60c3a22cd9fe83ed23bdcad5a86') no-repeat center center fixed;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	font-family: 'Cinzel Decorative', cursive;
+	text-align: center;
+	padding-bottom: 70px;
+}
+
+.header, label {
+	color: white;
+}
+
+.well {
+	background: rgba(255,255,255,0.8);
+}
+
+.btnPadding {
+	margin: 0 20px;
+}
+
+.text-area, .text-picture {
+	size: 30x1;
+}
+
+.text-description {
+	size: 30x7;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.linebreak label {
+	padding-right: 10px;
+}
+
+.linebreak input {
+	margin-right: 5px;
+}
+
+
+

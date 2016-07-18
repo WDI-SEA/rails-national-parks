@@ -1,0 +1,29 @@
+<h1 class="header"><%= @park.name %></h1>
+
+
+
+<h3 class="header">Park Description</h3>
+<div class="well">
+	<p><%= @park.description %></p>
+</div>
+
+<h3 class="header">Picture</h3>
+<div class="well">
+	<p><%= image_tag @park.picture, width: "100%" %> </p>
+</div>
+
+<div class="well">
+<h2>Rangers</h2>
+
+
+<% @park.rangers.each do |ranger| %>
+	<p><%= link_to(ranger.name, ranger_path) %></p>
+
+<% end %>
+</div>
+
+<!-- <%= render "application/partials/footer" %> -->
+<%= link_to('Edit This Park', edit_park_path, class:"btn btn-primary header btnPadding") %>
+<%= link_to('Delete this Park', park_path, class:"btn btn-danger header btnPadding", method: :delete) %>
+
+

@@ -1,0 +1,11 @@
+<h1 class="header">The Rangers</h1>
+
+<%= link_to('New Ranger', new_ranger_path, class:"header btn btn-primary") %>
+
+</br>
+</br>
+
+<% @rangers.each do |r| %>
+	<div class="well"><h2><%= link_to(r.name, ranger_path(r)) %></h2></div>
+	<% end %>
+

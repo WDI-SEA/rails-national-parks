@@ -1,0 +1,14 @@
+<h1 class="header">Add a Ranger</h1>
+	
+<%= form_for(@ranger) do |r| %>
+	<h3><%= r.label :name, class: "header" %></h3>
+	<%= r.text_area :name, class:"text_area", size:"30x1" %>
+
+	<h3><%= r.label :years, class:"header" %></h3>	
+	<%= r.text_area :years, class:"text_area", size:"5x1" %>
+
+	<div class="linebreak"><%= r.collection_check_boxes(:park_ids, @park, :id, :name) %></div></br></br>
+
+	<%= r.submit 'Add Ranger', class:"btn btn-primary"  %>
+
+<% end %>

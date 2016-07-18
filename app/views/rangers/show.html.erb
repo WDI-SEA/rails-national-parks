@@ -1,0 +1,12 @@
+<h1 class="header"><%= @ranger.name %></h1>
+
+
+
+<h3 class="header"><%= @ranger.name %>'s Parks</h3>
+<% @ranger.parks.each do |p| %>
+	<div class="well">
+		<h4 class="header"><%= link_to(p.name, park_path) %></h4>
+	</div>
+<% end %>
+
+<%= link_to('Edit This Ranger', edit_ranger_path, class:"btn btn-primary header btnPadding") %>

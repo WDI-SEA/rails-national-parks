@@ -1,0 +1,17 @@
+<h1 class="header">Park Edit</h1>
+
+
+<%= form_for(@park) do |p| %>
+	<%= p.label :name, class:"header" %></br>
+	<%= p.text_area :name, size:"30x1" %></br>
+
+	<%= p.label :description, class:"header" %></br>
+	<%= p.text_area :description, size:"30x7" %></br>
+
+	<%= p.label :picture, class:"header" %></br>
+	<%= p.text_area :picture, size:"30x1" %></br>
+
+	<div class="linebreak"><%= p.collection_check_boxes(:ranger_ids, @rangers, :id, :name) %></div></br>
+
+	<%= p.submit class:"btn btn-primary" %>
+<% end %>
