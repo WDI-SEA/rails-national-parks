@@ -1,0 +1,9 @@
+<h1>Rangers of the National Parks</h1>
+
+<% @rangers.each do |ranger| %>
+  <h2><a href="/ranger/<%= ranger.id %>"><%= ranger.name %></a></h2>
+<% end %>
+
+ <%= link_to('Back Home', parks_path) %>
+
+

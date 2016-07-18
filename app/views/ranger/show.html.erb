@@ -1,0 +1,8 @@
+<h1>Individual Ranger</h1>
+
+<h2><%= @rangers.name %></h2>
+<h3><%= @rangers.years %></h3>
+
+<%= link_to('Back Home', parks_path, class: "btn btn-primary") %>
+<%= link_to('Edit Ranger', edit_ranger_path, class: "btn btn-primary") %>
+<%= link_to('Fire Ranger', ranger_path, method: :delete, class: "btn btn-danger") %>
