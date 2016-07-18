@@ -1,0 +1,14 @@
+<h1>Edit Ranger Form</h1>
+
+<%= form_for(@ranger) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :years %>
+  <%= f.text_field :years %>
+  
+   <!-- f.collection_check_boxes(:ranger_ids, @rangers, :id, :name) -->
+
+  <%= f.submit 'submit' %>
+<% end %>
+
+<%= link_to('List of All Rangers', rangers_path) %>
