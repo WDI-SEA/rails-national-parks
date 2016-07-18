@@ -1,0 +1,13 @@
+<h1>Enter a new Ranger</h1>
+
+<%= form_for(@ranger) do |r| %>
+  <%= r.label :name %>
+  <%= r.text_field :name %>
+
+  <%= r.label :years %>
+  <%= r.text_area :years %>
+
+  <%= r.collection_check_boxes(:park_ids, @parks, :id , :name) %>
+
+  <%= r.submit %>
+<% end %>

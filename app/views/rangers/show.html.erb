@@ -1,0 +1,8 @@
+<h1><%= @ranger.name %></h1>
+<h2><%= @ranger.years %></h2>
+
+<div class="nav">
+  <h3><%= link_to("Delete", ranger_path, method: :delete) %></h3>
+  <h3><%= link_to('Edit Ranger', edit_ranger_path) %></h3>
+  <h3><%= link_to('Back to Rangers', rangers_path) %></h3>
+</div>
