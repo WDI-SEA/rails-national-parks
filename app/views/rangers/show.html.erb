@@ -1,0 +1,15 @@
+<nav>
+  <button><%= link_to('Park List', parks_path) %></button>
+  <button><%= link_to('Ranger List', rangers_path) %></button>
+</nav>
+<h1><%=@ranger.name%></h1>
+<h2><%=@ranger.year%> years</h2>
+<ul>
+<% @ranger.parks.each do |park| %>
+<li><%= park.name %></li>
+<% end %>
+</ul>
+<div>
+<button><%= link_to('Edit', edit_ranger_path) %></button>
+<button><%= link_to('Delete', @ranger, method: :delete) %></button>
+</div>

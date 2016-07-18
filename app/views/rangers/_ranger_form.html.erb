@@ -1,0 +1,16 @@
+<%= form_for @ranger do |f| %>
+  <div class="row">
+    <%= f.label :name%>
+    <%= f.text_field :name%>
+  </div>
+  <div class="row">
+    <%= f.label :year%>
+    <%= f.text_field :year%>
+  </div>
+  <div class="row">
+    <%= f.collection_check_boxes(:park_ids, @parks, :id, :name) %>
+  </div>
+  <div class="row">
+    <%= f.submit %>
+  </div>
+<% end %>

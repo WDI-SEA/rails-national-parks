@@ -1,0 +1,20 @@
+<%= form_for @park do |f| %>
+  <div class="row">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="row">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="row">
+  <%= f.collection_check_boxes(:ranger_ids, @rangers, :id, :name) %>
+  </div>
+  <div class="row">
+    <%= f.label :picture %>
+    <%= f.text_field :picture %>
+  </div>
+  <div class="row">
+    <%= f.submit %>
+  </div>
+<% end %>
