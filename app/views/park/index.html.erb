@@ -1,0 +1,20 @@
+<h1>Park Index</h1>
+
+<a href="/park/new">Add New Park</a>
+<% @park.each do |data| %>
+
+  <hr>
+  <a href="/park/<%= data.id %>"><%= data.name %></a>
+  <br>
+  <%= data.description %>
+  <br>
+  <img src="<%= data.picture%>" style="width: 400px; height=auto;">
+  <br>
+  <a href="<%= edit_park_path(data) %>"><button>edit</button></a>
+
+  <%= form_for(data, :html => {:method => :delete}) do |form| %>
+    <%= form.submit :value => "delete"%>
+  <% end %> 
+  <br>
+<% end %>
+
