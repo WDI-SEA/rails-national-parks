@@ -1,0 +1,10 @@
+<h1>National Park</h1>
+
+<% @parks.each do |park| %>
+
+     <a href="/parks/<%= park.id %>"><h3><%= park.name %></h3></a>
+
+
+<% end %>
+
+<a href="/parks/new"><h3>Create New Entry</h3></a>
