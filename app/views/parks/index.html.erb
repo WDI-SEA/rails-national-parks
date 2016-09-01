@@ -12,7 +12,9 @@
       <h5>edit<%= park.name %></h5>
     </a>
 
-    
+    <%= form_for(park, :html => {:method => :delete}) do |park| %>
+    <%= park.submit :value => "delete" %>
+    <%end%>
     <br>
   <% end %>
 </ul>
