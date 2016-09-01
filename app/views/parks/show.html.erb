@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 class="title"><%= @parks.name %></h1>
+  <div class="picture-frame">
+    <p><%= image_tag @parks.picture, class: 'picture' %></p>
+  </div>
+  <p class="description"><%= @parks.description %></p>
+
+    <li class="inline btn btn-primary"><%= link_to('Edit', edit_park_path) %></li>
+    
+  </ul>
+</div>

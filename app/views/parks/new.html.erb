@@ -1,0 +1,15 @@
+<h1>Add New Park</h1>
+<!-- form_for instance variable from controller do argument-->
+<%= form_for @park do |park| %>
+  <%= form.label :name %>
+  <%= form.text_field :name%>
+  <br>
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+  <br>
+  <%= form.label :picture %>
+  <%= form.text_field :picture %>
+  <br>
+  <%= form.submit %>
+
+<% end %>
