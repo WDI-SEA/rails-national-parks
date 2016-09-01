@@ -6,6 +6,7 @@
   <p class="description"><%= @parks.description %></p>
 
     <li class="inline btn btn-primary"><%= link_to('Edit', edit_park_path) %></li>
+    <li class="inline btn btn-danger pull-right"><%= link_to("Delete", @parks, method: :delete) %></li> 
     
   </ul>
 </div>
