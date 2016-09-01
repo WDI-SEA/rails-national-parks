@@ -1,2 +1,22 @@
-<h1>Parks#index</h1>
-<p>Find me in app/views/parks/index.html.erb</p>
+<h1>Parks Main</h1>
+<hr>
+<a href="/">Home</a>
+<br>
+<a href="/parks/new">Create A New Park</a>
+<hr>
+<div class="table table-striped">
+  <% @park.each do |park| %>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+    <a href="/parks/<%= park.id %>"><h3><%= park.name %></h3></a>
+    <p><%= park.description %></p>
+    <p><img class="img-responsive" src="<%= park.picture %>"></p>
+    <a href="<%= edit_park_path(park) %>"><button type="button" class="btn btn-warning">Edit</button></a>
+    <%= form_for(park, :html => {:method => :delete}) do |form| %>
+      <button type="button" class="btn btn-danger"><%= form.submit :value => "Delete" %></button>
+      <% end %>
+    </div>
+    </div>
+    <hr>
+  <% end %>
+</div>

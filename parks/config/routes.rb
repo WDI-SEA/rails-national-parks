@@ -1,14 +1,4 @@
 Rails.application.routes.draw do
-  # get 'parks/index'
-
-  # get 'parks/new'
-
-  # get 'parks/create'
-
-  # get 'parks/show'
-
-  # get 'parks/edit'
-
   root 'home#index'
 
   resources :parks
