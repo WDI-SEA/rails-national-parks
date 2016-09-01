@@ -1,0 +1,14 @@
+<h1>new Posts</h1>
+
+<%= form_for @park, url: '/park' do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :description %>
+  <%= form.text_area :description%>
+  <br>
+  <%= form.label :picture %>
+  <%= form.text_area :picture%>
+  <br>
+  <%= form.submit %>
+<% end %>
