@@ -1,8 +1,7 @@
-<h1>Add New Park</h1>
-<!-- form_for instance variable from controller do argument-->
-<%= form_for @park do |park| %>
+<h1>Create New National Park Entry</h1>
+<%= form_for @parks do |form| %>
   <%= form.label :name %>
-  <%= form.text_field :name%>
+  <%= form.text_field :name %>
   <br>
   <%= form.label :description %>
   <%= form.text_area :description %>
@@ -11,5 +10,4 @@
   <%= form.text_field :picture %>
   <br>
   <%= form.submit %>
-
 <% end %>
