@@ -1,0 +1,20 @@
+<h1>Parks#create</h1>
+<p>Find me in app/views/parks/create.html.erb</p>
+
+
+<h1> NEW PARK </h1>
+
+<%= form_for @park do |form| %> 
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+  <br>
+  <%= form.label :picture %>
+  <%= form.text_field :picture %>
+
+
+  <%= form.submit %>
+
+<% end %>
