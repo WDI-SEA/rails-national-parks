@@ -1,0 +1,8 @@
+<h1>All Parks</h1>
+
+<p>Hello world</p>
+
+<% @parks.each do |park| %>
+  <a href="<%= park_path(park) %>"><%= park.name %></a>
+  
+<% end %>
