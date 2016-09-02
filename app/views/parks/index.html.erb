@@ -1,0 +1,10 @@
+<h3>List of national parks:</h3>
+
+
+<!-- <ul style="list-style:none; padding:0"> -->
+  <% @parks.each do |park| %>
+    <a href="/parks/<%= park.id %>"><h4><%= park.name %></h4></a>
+    <p><%= park.description %></p>
+
+  <% end %>
+<!-- </ul> -->

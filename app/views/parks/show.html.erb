@@ -1,0 +1,5 @@
+<h1><%= @park.name %></h1>
+<img src= "<%= @park.picture %>">
+<p><%= @park.description %></p>
+
+<%= link_to "Delete this park".html_safe, @park, method: :delete %>
