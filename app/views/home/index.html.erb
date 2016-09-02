@@ -1,3 +1,7 @@
-<h1>National Parks Home</h1>
-<p>National Parks are fun and full of bears!</p>
-
+<div class="jumbotron">
+  <h1 id="header">National Parks Home</h1>
+  <p>National Parks are fun and full of bears!</p>
+  <%= image_tag 'picture.jpg', :class => 'img-responsive' %>
+  <p><a class="btn btn-primary btn-lg" href="<%= parks_path %>" role="button">Parks</a></p>
+  <button id="get-parks-btn" class="btn btn-danger">Get Parks</button>
+</div>
