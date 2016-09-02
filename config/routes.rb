@@ -1,34 +1,7 @@
 Rails.application.routes.draw do
-  get 'parks/index'
+  root 'parks#index'
 
-  get 'parks/new'
-
-  get 'parks/create'
-
-  get 'parks/show'
-
-  get 'parks/edit'
-
-  get 'parks/update'
-
-  get 'parks/destroycd'
-
-  get 'parks/..'
-
-  get 'parks/index'
-
-  get 'parks/new'
-
-  get 'parks/create'
-
-  get 'parks/show'
-
-  get 'parks/edit'
-
-  get 'parks/update'
-
-  get 'parks/destroy'
-
+  resources :parks
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

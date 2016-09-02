@@ -1,2 +1,10 @@
-<h1>Parks#index</h1>
-<p>Find me in app/views/parks/index.html.erb</p>
+<h3>List of national parks:</h3>
+
+
+<!-- <ul style="list-style:none; padding:0"> -->
+  <% @parks.each do |park| %>
+    <a href="/parks/<%= park.id %>"><h4><%= park.name %></h4></a>
+    <p><%= park.description %></p>
+
+  <% end %>
+<!-- </ul> -->
