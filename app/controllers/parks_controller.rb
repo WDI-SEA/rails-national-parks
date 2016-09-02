@@ -1,6 +1,6 @@
 class ParksController < ApplicationController
   def all_parks
-    render json: Park.all
+    render json: Park.order(created_at: :desc)
   end
 
   def new_park
