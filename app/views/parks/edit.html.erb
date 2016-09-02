@@ -1,0 +1,11 @@
+<h1>Edit A Park</h1>
+
+<%= bootstrap_form_for @park do |form| %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.text_area :description %>
+  <br>
+  <%= form.text_field :picture %>
+
+  <%= form.submit %>
+<% end %>

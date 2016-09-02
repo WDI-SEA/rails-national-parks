@@ -1,0 +1,16 @@
+<h1>All The Parks</h1>
+<a href="parks/new">Add a park</a>
+<br>
+ <% @parks.each do |park| %>
+  <div class="park-preview">
+      <a href="<%= park_path(park) %>"><h3> <%= park.name %> </h3></a>
+      <img src="<%= park.picture %>">
+      <br>
+      <a href="<%= edit_park_path(park) %>">Edit</a>
+      <%= form_for(park, :html => {:method => :delete}) do |park| %>
+        <%= park.submit :value => "delete" %>
+      <% end %> 
+  </div>
+ <% end %>
+
+<button id="get-parks-button">Get Parks as JSon</button>

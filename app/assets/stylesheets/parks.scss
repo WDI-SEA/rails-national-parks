@@ -1,0 +1,54 @@
+// Place all the styles related to the parks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$font-stack:    Helvetica, sans-serif;
+
+body {
+  font-family: $font-stack;
+  background-color: #114D11;
+  text-align: center;
+}
+
+img {
+
+}
+
+p {
+  color: white;
+  background-color: black;
+}
+
+a {
+  color: white;
+  font-size: 20px;
+}
+
+h1{
+  color: white;
+  font-size: 70px;
+}
+
+.park-preview {
+  display: inline-block;
+  float: left;
+
+  img {
+    width: 400px;
+    height: 100%;
+  }
+
+  h3{
+    color: white;
+    font-size: 50px;
+    position: absolute; 
+    top: 200px;
+    background-color: black;
+  }
+
+  a {
+    text-align: left;
+    color: white;
+    font-size: 20px;
+  }
+}
