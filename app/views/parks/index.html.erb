@@ -1,0 +1,6 @@
+<a href="<%= new_park_path %>" class="btn btn-success">New Park</a>
+<% @parks.each do |park| %>
+  <div class="well">
+    <a href="<%= park_path(park) %>"><h3><%= park.name %></h3></a>
+  </div>
+<% end %>

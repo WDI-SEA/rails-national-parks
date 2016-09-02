@@ -1,0 +1,54 @@
+<div class="jumbotron">
+  <h1 id="header">National Parks</h1>
+</div>
+
+<!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".new-park-modal">New Park</button>
+
+<ul id="parks-list" class="list-group">
+</ul>
+
+<div class="modal fade new-park-modal" tabindex="-1" role="dialog" aria-labelledby="newParkModal">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content modal-padding">
+      <form id="new-park-form">
+        <div class="form-group">
+          <label>Name</label>
+          <input id="park-name" class="form-control" type="text" placeholder="Park Name">
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="park-description" class="form-control" cols="10" rows="10" placeholder="Park Description"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Picture URL</label>
+          <input id="park-picture" class="form-control" type="text" placeholder="Picture URL">
+        </div>
+        <input type="submit" class="btn btn-primary">
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade edit-park-modal" tabindex="-1" role="dialog" aria-labelledby="newParkModal">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content modal-padding">
+      <form id="edit-park-form">
+        <input id="edit-id" type="hidden">
+        <div class="form-group">
+          <label>Name</label>
+          <input id="edit-name" class="form-control" type="text" placeholder="Park Name">
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="edit-description" class="form-control" cols="10" rows="10" placeholder="Park Description"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Picture URL</label>
+          <input id="edit-picture" class="form-control" type="text" placeholder="Picture URL">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Update">
+      </form>
+    </div>
+  </div>
+</div>
