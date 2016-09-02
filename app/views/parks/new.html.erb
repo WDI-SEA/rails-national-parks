@@ -1,0 +1,15 @@
+<h1>New Park</h1>
+<%= form_for @park do |methods| %>
+<div class="form">
+	<%= methods.label :name %>
+	<%= methods.text_field :name %>
+	<br>
+	<%= methods.label :desciption %>
+	<%= methods.text_area :description %>
+	<br>
+	<%= methods.label :picture %>
+	<%= methods.text_field :picture %>
+	<br>
+	<%= methods.submit %>
+</div>
+<% end %>

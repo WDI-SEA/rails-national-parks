@@ -1,0 +1,13 @@
+<h1>Parks#edit</h1>
+<%= form_for @park do |methods| %>
+	<%= methods.label :name %>
+	<%= methods.text_field :name %>
+	<br>
+	<%= methods.label :desciption %>
+	<%= methods.text_area :description %>
+	<br>
+	<%= methods.label :picture %>
+	<%= methods.text_field :picture %>
+	<br>
+	<%= methods.submit %>
+<% end %>

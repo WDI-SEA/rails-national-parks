@@ -1,0 +1,8 @@
+<h1>Parks</h1>
+<% @parks.each do |park| %>
+<div>
+
+<h2>	<a href="<%= park_path(park) %>"><%= park.name %></a> </h2>
+
+	</div>
+<%end%>
