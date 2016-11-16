@@ -1,0 +1,15 @@
+<h1>List of National Parks</h1>
+
+<p><%= link_to "Add a National Park", new_park_path %></p>
+
+<p><%= link_to "Home!", "/" %></p>
+
+<% @parks.each { |park| %>
+
+<h3>Currently Added Parks</h3>
+
+<p><strong><%= park.name %></strong></p>
+
+<p><%= park.content %></p>
+
+<% } %>
