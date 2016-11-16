@@ -1,2 +1,5 @@
-<h1>Parks#show</h1>
-<p>Find me in app/views/parks/show.html.erb</p>
+<div class="background-image" style="background-image: url(<%= @park.picture %>)"></div>
+<div class="page-container">
+	<h1><%= @park.parkname %></h1>
+	<div><%= @park.description %></div>
+</div>

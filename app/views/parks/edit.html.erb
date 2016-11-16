@@ -1,2 +1,19 @@
-<h1>Parks#edit</h1>
-<p>Find me in app/views/parks/edit.html.erb</p>
+<h1>Edit a Park</h1>
+
+<%= form_for @park do |p| %>
+	<div>
+		<%= p.label "Park Name" %>
+		<%= p.text_field :parkname %>
+	</div>
+	<div>
+		<%= p.label :description %>
+		<%= p.text_area :description %>
+	</div>
+	<div>
+		<%= p.label :picture %>
+		<%= p.text_field :picture %>
+	</div>
+	<%= p.submit %>
+<% end %>
+<hr>
+<a href="/parks"><div>All Parks</div></a>

@@ -1,2 +1,27 @@
-<h1>Parks#index</h1>
-<p>Find me in app/views/parks/index.html.erb</p>
+<h1>All National Parks</h1>
+
+<% if @parks%>
+	<% (0...@parks.length).each do |i| %>
+	<!-- style="background-image: url(<%= @parks[i].picture %>)" -->
+		<div>
+			<div><img src="<%= @parks[i].picture %>" width="100px" height="100px"></div>
+			<div>
+				<!-- /parks/show:<%=(@parks[i].id)%> -->
+				<a href="<%= park_path(@parks[i]) %>">
+					<%= @parks[i].parkname %>
+				</a>
+			</div>
+			<div>
+				<%= @parks[i].description %>
+			</div>
+			<div>
+				<%= link_to "Edit", edit_park_path(@parks[i]) %>
+				<%= link_to "Delete", park_path(@parks[i]), method: :delete %>
+			</div>
+		</div>
+	<% end %>
+<% else %>
+	<div>No parks found.</div>
+<% end %>
+<hr>
+<a href="<%= new_park_path %>"><div>Add A Park</div></a>

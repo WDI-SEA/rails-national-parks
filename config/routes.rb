@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'rangers/index'
+
+  get 'rangers/new'
+
+  get 'rangers/show'
+
+  get 'rangers/edit'
+
   get 'parks/index'
 
   get 'parks/new'
