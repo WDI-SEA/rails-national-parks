@@ -1,0 +1,16 @@
+<h1>Parks#index</h1>
+<p>Find me in app/views/parks/index.html.erb</p>
+
+<% if @parks %>
+	<% @parks.each do |park| %>
+		<div>
+			<p><strong><%= park.name %></strong></p>
+			<%= park.description %><br>
+			<img src="<%= park.picture %>"><br>
+			<%= link_to "Edit", edit_park_path(park) %>
+			<%= link_to "Delete", park_path(park), method: :delete %>
+		</div>
+	<% end %>
+	<% else %>
+	Parks not found
+<% end %>
