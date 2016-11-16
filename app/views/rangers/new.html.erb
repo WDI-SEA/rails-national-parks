@@ -1,2 +1,12 @@
-<h1>Rangers#new</h1>
-<p>Find me in app/views/rangers/new.html.erb</p>
+<h1>Add A Park Ranger</h1>
+
+<%= form_for @ranger do |r| %>
+	<div>
+		<%= r.label :name %>
+		<%= r.text_field :name %>
+	</div>
+	<div>
+		<%= r.collection_check_boxes :park_ids, Park.all, :id, :parkname %>
+	</div>
+	<%= r.submit %>
+<% end %>

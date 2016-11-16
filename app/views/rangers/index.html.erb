@@ -1,2 +1,18 @@
-<h1>Rangers#index</h1>
-<p>Find me in app/views/rangers/index.html.erb</p>
+<h1>All Park Rangers</h1>
+
+<% if @rangers %>
+	<%(0...@rangers.length).each do |i| %>
+		<div>
+			<p><%= @rangers[i].name %></p>
+		</div>
+		<br>
+		<%= link_to "Edit", edit_ranger_path(@rangers[i]) %>
+		<%= link_to "Delete", ranger_path(@rangers[i]), method: :delete %>
+	<% end %>
+<% else %>
+	No rangers found.
+<% end %>
+<hr>
+<%= link_to "All Parks", parks_path %>
+<a href="<%= new_ranger_path %>"><div>Add A Ranger</div></a>
+

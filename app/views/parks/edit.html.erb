@@ -10,6 +10,9 @@
 		<%= p.text_area :description %>
 	</div>
 	<div>
+		<%= p.collection_check_boxes :ranger_ids, Ranger.all, :id, :name %>
+	</div>
+	<div>
 		<%= p.label :picture %>
 		<%= p.text_field :picture %>
 	</div>
