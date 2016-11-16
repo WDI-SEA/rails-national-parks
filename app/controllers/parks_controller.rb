@@ -27,7 +27,9 @@ class ParksController < ApplicationController
   end
 
   def destroy
-    Park.find(params[:id]).delete
+    park = Park.find(params[:id])
+    park.rangers.clear
+    park.delete
     redirect_to parks_path
   end
 
