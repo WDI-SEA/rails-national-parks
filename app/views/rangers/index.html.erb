@@ -1,0 +1,19 @@
+<h1>Rangers</h1>
+
+<% @rangers.each do |ranger| %>
+  <div>
+    <p><strong>Name: </strong><%= ranger.name %></p>
+    <p><strong>Parks: </strong>
+    <% ranger.park_ids.each do |num| %>
+      <%= @parks.find(num).name %>,
+    <% end %>  
+    </p>
+    <br>
+    <%= link_to "Edit", edit_ranger_path(ranger) %>
+    <%= link_to "DELETE", ranger_path(ranger), method: :delete %>
+    <hr>
+  </div>
+<% end %>
+
+<%= link_to "New Ranger", new_ranger_path %>
+<%= link_to "Parks", "/parks" %>

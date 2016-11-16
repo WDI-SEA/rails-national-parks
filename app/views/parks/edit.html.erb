@@ -1,0 +1,23 @@
+<h1>Edit da Parks</h1>
+
+
+<%= form_for @park do |p| %>
+  <div>
+    <%= p.label :name %>
+    <%= p.text_field :name %>
+  </div>
+  <div>
+    <%= p.label :description %>
+    <%= p.text_field :description %>
+  </div>
+  <div>
+    <%= p.collection_check_boxes :ranger_ids, @rangers, :id, :name %> 
+  </div>
+  <div>
+    <%= p.label :picture %>
+    <%= p.text_field :picture %>
+  </div>
+  <%= p.submit %>
+<% end %>
+<br>
+<%= link_to "All Parks", "/parks" %>
