@@ -3,7 +3,7 @@
 <% if @rangers %>
 	<%(0...@rangers.length).each do |i| %>
 		<div>
-			<p><%= @rangers[i].name %></p>
+			<a href="<%= ranger_path(@rangers[i]) %>"><%= @rangers[i].name %></a>
 		</div>
 		<br>
 		<%= link_to "Edit", edit_ranger_path(@rangers[i]) %>
