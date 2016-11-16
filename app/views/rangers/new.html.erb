@@ -1,0 +1,11 @@
+<h1>Add a New Ranger</h1>
+
+<%= form_for @ranger do |r| %>
+
+  <p>Park Name:<%= r.text_field :name %></p>
+
+  <p>Park Description:<%= r.text_area :description %></p>
+
+  <p><%= r.submit "Create" %> </p>
+
+<% end %>

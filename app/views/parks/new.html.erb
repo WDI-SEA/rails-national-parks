@@ -1,0 +1,11 @@
+<h1>Add a Park</h1>
+
+<%= form_for @park do |p| %>
+
+  <p>Park Name:<%= p.text_field :name %></p>
+
+  <p>Park Description <%= p.text_area :content %></p>
+
+  <p><%= p.submit "Create" %> </p>
+
+<% end %>
