@@ -1,0 +1,19 @@
+
+<h1>Parks</h1>
+<p>List of National Parks</p>
+<br>
+
+<% @parks.each do |park| %>
+  <div>
+    <p> <%= park.name %> </p>
+    <p> <%= park.description %></p>
+    <p> <%= park.picture %> </p>
+    <p> <%= park.rangers %> </p>
+    <br>
+    <%= link_to "Edit", edit_park_path(park) %>
+    <%= link_to "Delete", park_path(park), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>  
+  <hr>
+<% end %>
+
+<%= link_to "New Park", new_park_path %>

@@ -1,0 +1,15 @@
+
+<h1>Rangers</h1>
+<p>List of Park Rangers</p>
+
+<% @rangers.each do |ranger| %>
+  <div>
+    <p> <%= ranger.name %> </p>
+    <br>
+    <%= link_to "Edit", edit_ranger_path(ranger) %>
+    <%= link_to "Delete", ranger_path(ranger), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>  
+  <hr>
+<% end %>
+
+<%= link_to "New Ranger", new_ranger_path %>
