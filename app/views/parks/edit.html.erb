@@ -1,0 +1,17 @@
+<h1>Edit a Park</h1>
+
+<%= form_for @park do |t| %>
+	<div>
+		<%= t.label :name %>
+		<%= t.text_area :name%>
+	</div>
+	<div>
+		<%= t.label :description %>
+		<%= t.text_field :description %>
+	</div>
+	<div>
+		<%= t.label :picture %>
+		<%= t.text_field :picture %>
+	</div>
+	<%= t.submit %>
+<% end %>

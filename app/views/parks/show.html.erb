@@ -1,0 +1,8 @@
+
+<div>
+	<h1><%= @park.name %></h1>
+	<%= @park.description %><br>
+	<img src="<%= @park.picture %>"><br>
+	<%= link_to "Edit", edit_park_path(@park) %>
+	<%= link_to "Delete", park_path(@park), method: :delete %>
+</div>
