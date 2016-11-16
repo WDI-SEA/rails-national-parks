@@ -1,0 +1,18 @@
+<h1>All Park Rangers</h1>
+
+<% if @rangers %>
+	<%(0...@rangers.length).each do |i| %>
+		<div>
+			<a href="<%= ranger_path(@rangers[i]) %>"><%= @rangers[i].name %></a>
+		</div>
+		<br>
+		<%= link_to "Edit", edit_ranger_path(@rangers[i]) %>
+		<%= link_to "Delete", ranger_path(@rangers[i]), method: :delete %>
+	<% end %>
+<% else %>
+	No rangers found.
+<% end %>
+<hr>
+<%= link_to "All Parks", parks_path %>
+<a href="/rangers/new"><div>Add A Ranger</div></a>
+

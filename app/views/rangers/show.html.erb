@@ -1,0 +1,10 @@
+<h1>Ranger <%= @ranger.name %></h1>
+
+<h3>All Parks For this Ranger:</h3>
+<ul>
+	<% (0...@ranger.parks.length).each do |i| %>
+	<li><%= @ranger.parks[i].parkname %></li>
+	<% end %>
+</ul>
+<hr>
+<a href="/rangers/index"><div>See All Rangers</div></a>

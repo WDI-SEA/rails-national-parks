@@ -1,0 +1,14 @@
+<div class="background-image" style="background-image: url(<%= @park.picture %>)"></div>
+<div class="page-container">
+	<h1><%= @park.parkname %></h1>
+	<div><%= @park.description %></div>
+	<div>
+		<p>All Park Rangers</p>
+		<ul>
+			<% (0...@park.rangers.length).each do |i| %>
+				<li><%= @park.rangers[i].name %></li>
+			<% end %>
+		</ul>
+	</div>
+</div>
+<h3><%= link_to "All Parks", parks_path %></h3>
