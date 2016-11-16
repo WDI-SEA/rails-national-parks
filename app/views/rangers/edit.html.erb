@@ -1,0 +1,12 @@
+<h1>Edit Park Ranger Information</h1>
+
+<%= form_for @ranger do |r| %>
+  <div>
+    <%= r.label :name %>
+    <%= r.text_field :name %>    
+  </div>
+  <%= r.submit %>
+
+<% end %>
+
+<%= link_to "Back to All Park Rangers", rangers_path %>

@@ -1,0 +1,23 @@
+
+<h1>Parks</h1>
+<%= link_to "Add New Park", new_park_path %>
+<br>
+<a href="/"><< Home</a>
+<br>
+<p>List of National Parks</p>
+<br>
+
+<% @parks.each do |park| %>
+  <div>
+    <p> Name: <%= park.name %> </p>
+    <p> Description: <%= park.description %></p>
+    <p> Photo URL: <%= park.picture %> </p>
+    <% park.ranger_ids.each do |num| %>
+    <p>Park Ranger: <%= @rangers.find(num).name %> </p>
+      <% end %>
+    <br>
+    <%= link_to "Edit", edit_park_path(park) %>
+    <%= link_to "Delete", park_path(park), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>  
+  <hr>
+<% end %>
