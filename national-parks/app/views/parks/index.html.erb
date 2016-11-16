@@ -1,0 +1,22 @@
+<h1>Here's a list of All National Parks</h1>
+
+<% (0...@parks.length).each do |i| %>
+	<div>
+		<h2><%= @parks[i].name %></h2>
+
+		<p><strong>description: </strong><%= @parks[i].description %></p>
+
+<!-- 		<% @parks.ranger_id.each do |num| %>
+			<p><em>Rangers: </em><%= @rangers[i].name %></p>
+		<% end %> -->
+
+		<% if @parks[i].picture == "N/A" %>
+			<p><strong>picture: </strong>N/A</p>
+		<% else %>
+			<img style="width:500px" src=<%= @parks[i].picture %> >
+		<% end %>
+
+	</div>
+<% end %>
+
+
