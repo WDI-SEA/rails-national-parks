@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'main#index'
+  root 'parks#index'
 
   get 'parks/index'
 
