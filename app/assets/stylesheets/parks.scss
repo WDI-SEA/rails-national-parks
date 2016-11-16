@@ -4,6 +4,7 @@
 body{
 	width: 100%;
 	height: 100%;
+	margin: 0 auto;
 }
 .background-image {
 	position: absolute;
@@ -14,4 +15,10 @@ body{
 	background-size:cover;
 	z-index: -1;
 	overflow: hidden;
+}
+.page-container {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	padding: 100px, 0;
 }
