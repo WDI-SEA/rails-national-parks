@@ -1,0 +1,23 @@
+<h1>Parks#index</h1>
+<p>Find me in app/views/parks/index.html.erb</p>
+
+<h2>PARKS!!!!!!!!!!!!</h2>
+
+<% if @parks %>
+	
+	<% (0...@parks.length).each do |i| %>
+		<div>
+			<h3><%= @parks[i].name %></h3>
+			<p>-<%= @parks[i].description %></p>
+			<p> <%= @parks[i].picture %></p>
+			<br>
+			<%= link_to "Edit", edit_park_path(@parks[i]) %>
+			<%= link_to "Delete", park_path(@parks[i]), method: :delete %>
+		</div>
+	<% end %>
+
+<% else %>
+	Parks not found.
+<% end %>
+
+<%= link_to "New Park", new_park_path %>
