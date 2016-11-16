@@ -1,0 +1,21 @@
+<h1>Big Ol' Sloppy List of Parks</h1>
+
+<ul>
+  <% @parks.each do |park| %>
+    <a href="/parks/<%= park.id %>">
+      <h3><%= park.name %> </h3>
+    </a>
+    <p><%= park.description %></p>
+    <img src="<% park.picture %>">
+
+    <a href="/parks/<%= park.id %>/edit">
+      <h5>edit<%= park.name %></h5>
+    </a>
+
+    <%= form_for(park, :html => {:method => :delete}) do |park| %>
+    <%= park.submit :value => "delete" %>
+    <%end%>
+    <br>
+  <% end %>
+</ul>
+
