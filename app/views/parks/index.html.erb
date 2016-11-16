@@ -4,5 +4,7 @@
 
 <% @parks.each do |park| %>
   <a href="<%= park_path(park) %>"><%= park.name %></a>
+  <p><%= park.description %></p>
+  <img src="<%= park.picture %>">
   
 <% end %>
