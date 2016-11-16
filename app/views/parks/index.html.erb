@@ -1,0 +1,22 @@
+<h1>National Parks</h1>
+<% @parks.each do |park| %>
+  <div>
+    <p>
+      <p><strong>Name: </strong><%= park.name %></p>
+      <p><strong>Description: </strong><%= park.description %></p>
+      <p><strong>Picture URL: </strong></p><div><img src="<%= park.picture %>" width="auto" height = "300px"></div>
+      <p><strong>Rangers: </strong>
+      <% park.ranger_ids.each do |num| %>
+        <%= @rangers.find(num).name %>, 
+      <% end %>
+      </p>
+      <br>
+      <%= link_to "Edit", edit_park_path(park) %>
+      <%= link_to "DELETE", park_path(park), method: :delete %>
+    </p>
+    <hr>
+  </div>
+<% end %>
+
+<%= link_to "New Park", new_park_path %>
+<%= link_to "Rangers", "/rangers" %>

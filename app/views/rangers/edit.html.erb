@@ -1,0 +1,14 @@
+<h1>Edit Rangers</h1>
+
+<%= form_for @ranger do |r| %>
+  <div>
+    <%= r.label :name %>
+    <%= r.text_field :name %>
+  </div>
+  <div>
+    <%= r.collection_check_boxes :park_ids, @parks, :id, :name %>
+  </div>
+  <%= r.submit %>
+<% end %>
+<br>
+<%= link_to "All Rangers", "/rangers" %>
