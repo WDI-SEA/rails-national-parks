@@ -1,15 +1,20 @@
 
 <h1>Rangers</h1>
+<%= link_to "Add New Ranger", new_ranger_path %>
+<br>
+<a href="/"><< Home</a>
+<br>
 <p>List of Park Rangers</p>
 
 <% @rangers.each do |ranger| %>
   <div>
-    <p> <%= ranger.name %> </p>
+    <p> Name: <%= ranger.name %> </p>
+    <% ranger.park_ids.each do |num| %>
+    <p>Park: <%= @parks.find(num).name %> </p>
+      <% end %>
     <br>
     <%= link_to "Edit", edit_ranger_path(ranger) %>
     <%= link_to "Delete", ranger_path(ranger), method: :delete, data: { confirm: "Are you sure?" } %>
   </div>  
   <hr>
 <% end %>
-
-<%= link_to "New Ranger", new_ranger_path %>

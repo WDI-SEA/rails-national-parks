@@ -1,6 +1,7 @@
 class RangersController < ApplicationController
   def index
     @rangers = Ranger.all
+    @parks = Park.all
   end
 
   def new
