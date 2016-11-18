@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: britbroet
+  api_key: '915169773339882'
+  api_secret: mxrGIXw4VYBhEqmv5ZQW9cVQOd8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: britbroet
+  api_key: '915169773339882'
+  api_secret: mxrGIXw4VYBhEqmv5ZQW9cVQOd8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: britbroet
+  api_key: '915169773339882'
+  api_secret: mxrGIXw4VYBhEqmv5ZQW9cVQOd8
+  enhance_image_tag: true
+  static_image_support: false
