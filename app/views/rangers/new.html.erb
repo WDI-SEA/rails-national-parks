@@ -1,0 +1,18 @@
+<h2>Add New Ranger</h2>
+
+<%= form_for @ranger do |r| %>
+	<div>
+		<%= r.label :name %>
+		<%= r.text_field :name %> 
+	</div>
+
+	<div>
+	Select parks for this ranger:<br>
+	<%= r.collection_check_boxes :park_ids, Park.all, :id, :name %>
+	</div>
+
+	<%= r.submit %>
+
+<% end %>
+
+<%= link_to "Back to all rangers", "/rangers" %>

@@ -1,0 +1,20 @@
+<h2><%= @ranger[:name] %></h2>
+
+<div>Parks: </div>
+	<% if @ranger.parks.length > 0 %>
+		<ul class="list-unstyled">
+			<% (0...@ranger.parks.length).each do |n| %>
+				<li>
+				<%= link_to @ranger.parks[n].name, park_path(@ranger.parks[n].id) %>
+				</li>
+			<% end %>
+		</ul>
+	<% else %>
+		<div class="small"><em>No parks listed for this ranger.</em></div><br>
+	<% end %>
+</div>
+
+<div class="container">
+	<%= link_to "Edit", edit_ranger_path, class: 'btn-sm btn-primary' %>
+	<%= link_to "Delete", ranger_path, method: :delete, class: 'btn-sm btn-danger' %>
+</div>

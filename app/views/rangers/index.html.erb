@@ -1,0 +1,34 @@
+<h2>Rangers</h2>
+<%= link_to "Add New Ranger", new_ranger_path, class: 'btn btn-info' %>
+
+<% if @rangers %>
+	
+	<% (0...@rangers.length).each do |i| %>
+		<div>
+			<h3><%= @rangers[i].name %></h3>
+
+				<div><strong>Parks:</strong></div>
+				<div>
+					<% if @rangers[i].park_ids.length > 0 %>
+						<ul class="list-unstyled">
+							<% @rangers[i].park_ids.each do |n| %>
+								<li>
+								<%= link_to @parks.find(n).name, park_path(@parks.find(n).id) %>
+								</li>
+							<% end %>
+						</ul>
+					<% else %>
+						<div class="small"><em>No parks listed for this ranger.</em></div><br>
+					<% end %>
+				</div>
+
+			<%= link_to "Edit", edit_ranger_path(@rangers[i]), class: 'btn-sm btn-primary' %>
+			<%= link_to "Delete", ranger_path(@rangers[i]), method: :delete, class: 'btn-sm btn-danger' %>
+		</div>
+	<% end %>
+
+<% else %>
+	Ragers not found.
+<% end %>
+
+
