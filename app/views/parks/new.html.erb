@@ -1,0 +1,21 @@
+
+
+<h2>Create a new park</h2>
+
+<%= form_for @park do |p| %>
+  <div>
+    <%= p.label :name %>
+    <%= p.String :name %>
+  </div>
+  <div>
+    <%= p.label :description %>
+    <%= p.text_field :description %>
+  </div>
+  <div>
+    <%= p.label :picture %>
+    <%= p.String :picture %>
+  </div>
+  <%= p.submit %>
+<% end %>
+
+<%= link_to "Back to All Tweets", "/tweets" %>
