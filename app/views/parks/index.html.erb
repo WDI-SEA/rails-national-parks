@@ -1,0 +1,17 @@
+<h1>Parks</h1>
+
+<h2> Viewing all parks </h2>
+
+<% (0...@parks.length).each do |i| %>
+  <div>
+  <p><%= @parks[i].name %></p>
+  <p><%= @parks[i].description %></p>
+  <p><%= @parks[i].picture %></p>
+
+  <br>
+  <%= link_to "Edit", edit_park_path(@parks[i]) %>
+  <%= link_to "Delete", park_path(@parks[i]), method: :delete %>
+  </div>
+<% end %>
+
+<%= link_to "New park", new_park_path() %>
