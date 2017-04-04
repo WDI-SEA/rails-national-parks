@@ -26,7 +26,7 @@ Let's create an app to showcase these wonderful parks.
 ### Routes and Views
 
 | route | description | controller |  action/view |
-|-------|-----|----|-----|------|
+|-------|-----|----|-----|
 | GET /  | Your home page | home | index |
 | GET /parks | list all parks | parks | index |
 | GET /parks/new | show add park form | parks | new |
