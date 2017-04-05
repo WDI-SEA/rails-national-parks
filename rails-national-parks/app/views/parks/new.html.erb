@@ -1,0 +1,22 @@
+<ul class="nav navbar-nav text-center">
+	<li><a href="/">Home</a></li>
+	<li><a href="/parks/new">Add Park</a></li>
+</ul>
+
+<div class="well text-center">
+<h1>New Park Form</h1>
+<%= bootstrap_form_for (@park) do |t| %>
+  <div>
+  <%= t.text_field :name %>
+  </div>
+  <div>
+  <%= t.text_area :description  %>
+  </div>
+  <div>
+  <%= t.url_field :picture  %>
+  </div>
+  <br>
+  <%= t.submit %>
+<% end %>
+
+</div>
