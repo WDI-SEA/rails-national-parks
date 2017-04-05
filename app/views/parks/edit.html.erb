@@ -1,2 +1,9 @@
-<h1>Parks#edit</h1>
-<p>Find me in app/views/parks/edit.html.erb</p>
+<div class="container">
+  <h1>Edit Park Form</h1>
+  <%= bootstrap_form_for @park do |p| %>
+    <%= p.text_field :name %>
+    <%= p.text_area :description %>
+    <%= p.url_field :picture %>
+    <%= p.primary %>
+  <% end %>
+</div>

@@ -1,1 +1,9 @@
-<h1>New Parks Form</h1>
+<div class="container">
+  <h1>New Parks Form</h1>
+  <%= bootstrap_form_for @park do |p| %>
+    <%= p.text_field :name %>
+    <%= p.text_area :description %>
+    <%= p.url_field :picture %>
+    <%= p.primary %>
+  <% end %>
+</div>

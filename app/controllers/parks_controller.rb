@@ -17,7 +17,25 @@ class ParksController < ApplicationController
   end
 
   def edit
+    @park = Park.find(params[:id])
   end
+
+  def update
+    p = Park.find(params[:id])
+    p.update(park_params)
+    redirect_to parks_path
+  end
+
+  def destroy
+    Park.find(params[:id]).delete
+    redirect_to parks_path
+  end
+
+  def edit_park_path(park)
+    park_path(park) + "/edit"
+  end
+
+  private
 
   def park_params
     params.require(:park).permit(:name, :description, :picture)
