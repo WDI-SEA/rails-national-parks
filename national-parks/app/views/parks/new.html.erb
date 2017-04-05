@@ -1,0 +1,17 @@
+<h1>Add Your Favorite National Park to the List</h1>
+
+<%= form_for @park do |p| %>
+
+		<%= p.text_field :name %>
+
+		<%= p.text_area :description %>
+
+		<%= p.collection_check_boxes :ranger_ids, Ranger.all, :id, :name %>
+
+		<%= p.text_field :picture %>
+
+		<%= p.submit %>
+
+<% end %>
+
+<%= link_to "Back to all tweets", "/tweets" %>
