@@ -12,9 +12,16 @@ class ParksController < ApplicationController
     redirect_to parks_path
   end
 
+  # Edit route is to get this specific park to update
   def edit
     @park = Park.find(params[:id]).update(park_params)
     redirect_to parks_path
+  end
+
+  # Update route is the actual PUT method to edit data in your DB
+  def update
+    p = Park.find(params[:id])
+    # p.udpate(park_params).....
   end
 
   def show
