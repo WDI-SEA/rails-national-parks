@@ -1,0 +1,11 @@
+<!-- <h1>Parks#index</h1>
+<p>Find me in app/views/parks/index.html.erb</p>
+ -->
+
+<h1>Our Parks:</h1>
+<a href="parks/new">New</a>
+<% @parks.each do |park| %>
+  <h3><%= park.name %></h3>
+  <a href="<%= park_path(park) %>">Visit</a>
+  <img src="<%= park.picture %>">
+<% end %>

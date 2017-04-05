@@ -1,0 +1,19 @@
+<!-- <h1>Parks#new</h1>
+<p>Find me in app/views/parks/new.html.erb</p>
+ -->
+<a href="/">Home</a>
+<h1>Add Your Park</h1>
+
+<%= form_for @park do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :picture %>
+  <%= form.text_field :picture %>
+
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+
+  <%= form.submit %>
+
+<% end %>

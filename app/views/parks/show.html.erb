@@ -1,0 +1,10 @@
+<!-- <h1>Parks#show</h1>
+<p>Find me in app/views/parks/show.html.erb</p>
+ -->
+ <a href="/">Home</a>
+
+ <h1><%= @park.name %></h1>
+ <a href="/parks/<%= @park.id %>/edit">Edit</a>
+ <%= link_to "Delete", park_path(@park), method: :delete %>
+ <img src="<%= @park.picture %>">
+ <p><%= @park.description %></p>
