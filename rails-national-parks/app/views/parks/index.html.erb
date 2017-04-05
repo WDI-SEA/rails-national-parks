@@ -1,0 +1,18 @@
+<div class="text-center">
+	<ul class="nav navbar-nav text-center">
+		<li><a href="/">Home</a></li>
+		<li><a href="/parks/new">Add Park</a></li>
+	</ul>
+
+	<h1>Parks</h1>
+	<div class="row text-center">
+		<div class="well col-xs-6 parkWell">
+		<% @parks.each do |t| %>
+			<h3><%= t.name %></h3>
+			<p><%= t.description %></p>
+			<img src=<%= t.picture %>>
+		<%end%>
+		</div>
+	</div>
+
+</div>
