@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Rangers List</h1>
+
+  <ul>
+    <% @rangers.each do |ranger| %>
+      <h3><%= link_to "Ranger " + ranger.name, ranger_path(ranger) %></h3>
+    <% end %>
+  </ul>
+</div>
