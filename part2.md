@@ -4,7 +4,7 @@
 * Create CRUD routes for rangers
 
 | route | description | controller |  action/view |
-|-------|-----|----|-----|------|
+|-------|-----|----|-----|
 | GET /rangers | list all rangers | rangers | index |
 | GET /rangers/new | show add ranger form, as well as parks the ranger can be added to | rangers | new |
 | POST /rangers | create ranger | rangers | create (no view) |
