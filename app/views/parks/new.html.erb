@@ -1,0 +1,14 @@
+<h1>Add New Park</h1>
+
+<%= form_for @park do |p| %>
+    <%= p.label :name %>
+    <%= p.text_field :name %>
+    <br>
+    <%= p.label :description %>
+    <%= p.text_field :description %>
+    <br>
+    <%= p.label :picture %>
+    <%= p.text_field :picture %>
+    <br>
+    <%= p.submit %>
+<% end %>
