@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>New Ranger Form</h1>
+  <%= bootstrap_form_for @ranger do |r| %>
+    <%= r.text_field :name %>
+    <%= r.text_area :experience %>
+    <%= r.text_field :parks %>
+    <%= r.primary %>
+  <% end %>
+</div>

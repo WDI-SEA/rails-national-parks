@@ -7,7 +7,7 @@ Let's create an app to showcase these wonderful parks.
 ##Getting Started
 
 * Fork and clone this repository
-* Follow the recommended process for creating your Rails app. 
+* Follow the recommended process for creating your Rails app.
 
 ##Components
 
@@ -24,7 +24,6 @@ Let's create an app to showcase these wonderful parks.
 * A controller for your `Park` model
 
 ### Routes and Views
-
 | route | description | controller |  action/view |
 |-------|-----|----|-----|
 | GET /  | Your home page | home | index |

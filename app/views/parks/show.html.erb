@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="text-center">
+    <h1><%= @park.name %></h1>
+    <%= link_to "Delete Park", park_path(@park), method: :delete, class: 'btn btn-danger'%>
+    <%= link_to "Edit Park", edit_park_path(@park), class: 'btn btn-info'%>
+    <br><br>
+    <img class="park-pic" src=<%= @park.picture %> >
+  </div>
+  <p><%= @park.description %></p>
+</div>

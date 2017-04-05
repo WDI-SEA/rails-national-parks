@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="text-center">
+    <h1><%= @ranger.name %></h1>
+    <%= link_to "Delete Ranger", ranger_path(@ranger), method: :delete, class: 'btn btn-danger'%>
+    <%= link_to "Edit Ranger", edit_ranger_path(@ranger), class: 'btn btn-info'%>
+    <br><br>
+  </div>
+  <p><%= @ranger.experience %></p>
+</div>
