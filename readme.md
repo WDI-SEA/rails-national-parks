@@ -1,30 +1,29 @@
-# National Parks
+# README
 
-The National Park Service was created in 1916 by President Woodrow Wilson in order to preserve America's natural and historic scenery. The NPS oversees over 400 units of preserves, monuments, battlefields, and parks. 59 of these units are officially designated as National Parks.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Let's create an app to showcase these wonderful parks.
+Things you may want to cover:
 
-##Getting Started
+* Ruby version
 
-* Fork and clone this repository
-* Follow the recommended process for creating your Rails app. 
+* System dependencies
 
-##Components
+* Configuration
 
-### Models
+* Database creation
 
-* A `Park` model that stores the following attributes. Choose the appropriate data types for each (`string` or `text`)
-  * `name`
-  * `description`
-  * `picture` (for now, have this store a URL to a picture of a park)
+* Database initialization
 
-### Controllers
+* How to run the test suite
 
-* A controller for your home page
-* A controller for your `Park` model
+* Services (job queues, cache servers, search engines, etc.)
 
-### Routes and Views
+* Deployment instructions
 
+<<<<<<< HEAD
+* ...
+=======
 | route | description | controller |  action/view |
 |-------|-----|----|-----|
 | GET /  | Your home page | home | index |
@@ -83,3 +82,4 @@ Let's create an app to showcase these wonderful parks.
 ## Licensing
 1. All content is licensed under a CC-BY-NC-SA 4.0 license.
 2. All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
+>>>>>>> e19ae0ae39ad2a4d988ec05b7088becd73c538e6
