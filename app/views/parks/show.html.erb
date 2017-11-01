@@ -1,0 +1,12 @@
+<a href="/">HOME</a>
+
+<div>
+	<h3><%= @park.name %></h3>
+	<p><%= @park.description %></p>
+	<img src=<%= @park.picture %> width="300px">
+</div>
+
+<div>
+	<a href="/parks/<%= @park.id %>/edit">Edit</a>
+	<%= link_to "Delete", park_path(@park), method: :delete %>
+</div>
