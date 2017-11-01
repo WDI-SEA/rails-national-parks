@@ -1,0 +1,14 @@
+<h1>Parks#index</h1>
+<p>Find me in app/views/parks/index.html.erb</p>
+
+<h1>National Parks</h1>
+
+<% @parks.each do |p| %>
+
+  <div>
+    <p><strong>Name: </strong><%= p.name %></p>
+    <p><strong>Description: </strong><%= p.description %></p>
+    <p><strong>Picture URL: </strong></p><div><img src="<%= p.picture %>" width="auto" height = "200px"></div>
+  </div>
+  
+<% end %>
