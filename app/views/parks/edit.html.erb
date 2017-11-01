@@ -1,0 +1,17 @@
+<div class="container">
+	<h1>Edit your park</h1>
+	<div class="needsMargin">
+	<%= link_to "Back to List", parks_path, method: :get, class: 'btn btn-primary' %>
+	</div>
+
+	<%= bootstrap_form_for @park do |p| %>
+	  <%= p.text_field :name %>
+	  <%= p.text_area :description %>
+	  <%= p.text_field :picture %>
+	  
+	
+	  <%= p.primary %>
+	<% end %>
+
+
+</div>

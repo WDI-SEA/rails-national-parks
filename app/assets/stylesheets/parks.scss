@@ -1,0 +1,22 @@
+// Place all the styles related to the parks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.row{
+	height: 50px;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: 3px 2px 2px 2px #888888;
+	margin: 10px 0;
+}
+
+.row div{
+	display: inline-block;
+}
+
+.needsMargin{
+	margin: 20px 0;
+}

@@ -1,0 +1,12 @@
+<div class="container">
+	<h1><%= @park.name %></h1>
+	
+	<p><%= @park.description %></p>
+	
+	<div class="needsMargin">
+	<%= link_to "Back to List", parks_path, method: :get, class: 'btn btn-primary' %>
+	</div>
+	<img class="img-responsive" src="<%= @park.picture %>" alt="	yerajerk" />
+</div>
+
+
