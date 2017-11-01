@@ -1,0 +1,15 @@
+<h1>Trails#index</h1>
+<p>Find me in app/views/trails/index.html.erb</p>
+
+
+
+
+
+<% @trail.each do |t| %>
+    <div class='center'
+    <a href="<%= trail_path(t) %>"><%= t.pathname %></a>
+    <p><%= t.discription %></p>
+    <img src="<%= t.img %>"/>
+    </div>
+    
+  <% end %>

@@ -1,0 +1,19 @@
+<h1>Trails#new</h1>
+<p>Find me in app/views/trails/new.html.erb</p>
+
+<%= bootstrap_form_for @trail, :html => {:class => "form-horizontal center"} do |t| %>
+    <div class="form-group">
+   
+    <%= t.text_field :pathname   %>
+   
+    
+    <%= t.text_field :img %>
+   
+    <%= t.text_area :discription %>
+   
+  
+  
+    <%= t.primary %>
+    </div>
+  <% end %>
+  

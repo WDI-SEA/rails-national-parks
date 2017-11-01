@@ -1,0 +1,20 @@
+<h1>Trails#show</h1>
+<p>Find me in app/views/trails/show.html.erb</p>
+
+
+
+
+
+ 
+<table>
+<tr>
+  <th>trail</th>
+  <th>description</th>
+</tr>
+<tr>
+  <% @trail.each do |s| %>
+    <td><%= s.pathname %></td>
+    <td><%= s.discription %></td>
+  <% end %>
+</tr>
+</table>
