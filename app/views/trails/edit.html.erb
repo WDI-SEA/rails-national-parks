@@ -1,0 +1,18 @@
+<h1>Trails#edit</h1>
+<p>Find me in app/views/trails/edit.html.erb</p>
+
+<%= link_to "Edit Trail", edit_trail_path(@trail), class: 'btn btn-default' %>
+
+<%= form_for @trail do |t| %>
+  <div>
+  <%= t.label :discription %>
+  <%= t.text_area :discription %>
+  </div>
+
+  <div>
+  <%= t.label :pathname %>
+  <%= t.text_field :pathname %>
+  </div>
+
+  <%= t.submit %>
+<% end %>
