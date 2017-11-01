@@ -1,0 +1,15 @@
+<div class="container">
+	<h1>Make a new park</h1>
+	<p>Add a new park here</p>
+
+	<%= bootstrap_form_for @park do |p| %>
+	  <%= p.text_field :name %>
+	  <%= p.text_area :description %>
+	  <%= p.text_field :picture %>
+	  
+	
+	  <%= p.primary %>
+	<% end %>
+
+
+</div>

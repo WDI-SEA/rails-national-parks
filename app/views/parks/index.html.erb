@@ -1,0 +1,25 @@
+<div class="container">
+	<h1>National Parks List</h1>
+	<div>
+		<div class="needsMargin">
+			<%= link_to "Create New", new_park_path, method: :get, class: 'btn btn-warning' %>
+		</div>
+	</div>
+	<p>Click a thing and you can look at it</p>
+
+	<% @parks.each do |park| %>
+		<div class="row">
+			<div class="col-xs-8"><%= park.name %></div>
+			<div class="col-xs-1">
+				<%= link_to "View", park_path(park), method: :get, class: 'btn btn-primary' %>
+			</div>
+			<div class="col-xs-1">
+				<%= link_to "Edit", edit_park_path(park), method: :get, class: 'btn btn-success' %>
+			</div>
+			<div class="col-xs-1">
+				<%= link_to "Delete", park_path(park), method: :delete, class: 'btn btn-danger' %>
+			</div>
+		</div>
+		
+	<% end %>
+</div>
