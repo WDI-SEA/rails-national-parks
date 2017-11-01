@@ -18,7 +18,7 @@ class ParksController < ApplicationController
   end
 
   def edit
-    @park = Park.find(params[:name])
+    @park = Park.find(params[:id])
   end
 
   def update
