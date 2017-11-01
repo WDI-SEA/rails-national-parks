@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20171101003820) do
   create_table "trails", force: :cascade do |t|
     t.string "pathname"
     t.text "discription"
+    t.string "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -3,13 +3,15 @@ class TrailsController < ApplicationController
         @trail = Trail.all
       end
     
-      def create
-        Trail.create(trail_params)
-        redirect_to trails_path
-      end
     
       def new
         @trail = Trail.new
+      end
+
+      def create
+        Trail.create(trail_params)
+        redirect_to trails_path
+       
       end
     
       def edit
@@ -33,7 +35,7 @@ class TrailsController < ApplicationController
     
       private
       # this is used to prevent mass assiginment of params 
-      def tweet_params
-        params.require(:trail).permit(:description, :pathname)
+      def trail_params
+        params.require(:trail).permit(:discription, :pathname, :img)
       end
 end
