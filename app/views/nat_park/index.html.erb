@@ -1,0 +1,8 @@
+<h1>Our Parks:</h1>
+ <a href="/nat_park/new">New</a>
+ <% @parks.each do |park| %>
+   <h3><%= park.name %></h3>
+   <a href="<%= nat_park_show_name_path(park) %>">Edit</a>
+   <%= link_to 'name', nat_park_show_name_path(@park) %>
+   <p><%= park.description %></p>
+ <% end %>
