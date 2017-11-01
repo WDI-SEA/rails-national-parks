@@ -6,8 +6,10 @@
 
 
 <% @trail.each do |t| %>
+    <div class='center'
     <a href="<%= trail_path(t) %>"><%= t.pathname %></a>
     <p><%= t.discription %></p>
     <img src="<%= t.img %>"/>
+    </div>
     
   <% end %>

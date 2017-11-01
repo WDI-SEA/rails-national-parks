@@ -1,3 +1,28 @@
 // Place all the styles related to the trails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+    background-color: pink;
+    text-align: center;
+}
+
+img{
+    height: 400px;
+    width: 400px;
+}
+
+div{
+    
+    // display: inline;
+    // position: static;
+    // position: relative;
+    // right: -20px;
+    // border: 1px solid rgb(23, 175, 235);
+    // max-width: 500px;
+}
+.center{
+    margin: auto;
+    width: 60%;
+    border: 3px solid rgb(33, 164, 173);
+    padding: 10px;
+}

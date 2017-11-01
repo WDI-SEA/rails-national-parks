@@ -2,10 +2,10 @@
 <p>Find me in app/views/trails/edit.html.erb</p>
 
 <%= bootstrap_form_for @trail do |t| %>
-  <%= t.text_area :discription %>
+ 
   <%= t.text_field :pathname %>
   <%= t.text_field :img %>
-
+  <%= t.text_area :discription %>
 
   <%= t.primary %>
 <% end %>
