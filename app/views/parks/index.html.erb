@@ -6,9 +6,14 @@
 <% @parks.each do |p| %>
 
   <div>
-    <p><strong>Name: </strong><%= p.name %></p>
-    <p><strong>Description: </strong><%= p.description %></p>
-    <p><strong>Picture URL: </strong></p><div><img src="<%= p.picture %>" width="auto" height = "200px"></div>
+    <p>Name: <%= p.name %></p>
+    <p>Description: <%= p.description %></p>
+    <p>Picture: </p>
+    <div><img src="<%= p.picture %>" width="auto" height = "200px"></div>
+    <a href="/parks/<%= p.id %>">View this Park</a>
   </div>
-  
+
 <% end %>
+
+
+<a href="/parks/new">Add a New Park</a>
