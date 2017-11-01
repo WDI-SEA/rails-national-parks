@@ -1,0 +1,20 @@
+<h1>Add parks!</h1>
+
+<%= form_for @park do |t| %>
+  <div>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+  </div>
+
+  <div>
+  <%= t.label :description %>
+  <%= t.text_area :description %>
+  </div>
+
+  <div>
+  <%= t.label :images %>
+  <%= t.text_area :images %>
+  </div>
+
+  <%= t.submit %>
+<% end %>

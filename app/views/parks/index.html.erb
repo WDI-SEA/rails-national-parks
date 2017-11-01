@@ -1,0 +1,7 @@
+<h1>Parks!</h1>
+
+<a href="parks/new">Add Park</a>
+
+<% @parks.each do |park| %>
+	<a href="parks/<%= park.id %>"><h3><%= park.name %></h3></a>
+<% end %>
