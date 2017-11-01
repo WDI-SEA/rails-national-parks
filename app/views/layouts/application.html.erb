@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsNationalParks</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <body>
+    <div class="navbar navbar-default">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/parks">Park List</a></li>
+        <li><a href="/parks/new">Add new park</a></li>
+        <li><a href="/rangers">Ranger List</a></li>
+        <li><a href="/rangers/new">Add new ranger</a></li>
+      </ul>
+    </div>
+    <%= yield %>
+  </body>
+</html>
