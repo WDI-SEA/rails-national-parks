@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Parks List</h1>
+
+  <ul>
+    <% @parks.each do |park| %>
+      <h3><%= link_to park.name, park_path(park) %></h3>
+    <% end %>
+  </ul>
+</div>
