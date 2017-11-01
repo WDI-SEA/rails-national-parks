@@ -1,0 +1,19 @@
+<h1>Parks#index</h1>
+<p>Find me in app/views/parks/index.html.erb</p>
+
+<h1>National Parks</h1>
+
+<% @parks.each do |p| %>
+
+  <div>
+    <p>Name: <%= p.name %></p>
+    <p>Description: <%= p.description %></p>
+    <p>Picture: </p>
+    <div><img src="<%= p.picture %>" width="auto" height = "200px"></div>
+    <a href="/parks/<%= p.id %>">View this Park</a>
+  </div>
+
+<% end %>
+
+
+<a href="/parks/new">Add a New Park</a>
