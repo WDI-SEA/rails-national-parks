@@ -21,8 +21,8 @@ class ParksController < ApplicationController
   end
 
   def update
-      i = Park.find(params[:id])
-      i.update(park_params)
+      t = Park.find(params[:id])
+      t.update(park_params)
       redirect_to parks_path
   end
 
@@ -36,5 +36,5 @@ private
   def park_params
       params.require(:park).permit(:description, :name)
   end
-  
+
 end

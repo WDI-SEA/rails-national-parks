@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
     root 'parks#index'
 
     get 'parks' => 'parks#index'
