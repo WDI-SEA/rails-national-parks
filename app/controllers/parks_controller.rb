@@ -19,8 +19,7 @@ class ParksController < ApplicationController
 
 	def show
 		@park = Park.find(params[:id])
-		t.update(park_parms)
-		redirect_to parks_path
+		
 	end
 
 	def destroy
