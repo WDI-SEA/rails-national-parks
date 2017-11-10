@@ -1,0 +1,6 @@
+<h1>National Parks</h1>
+<a href='parks/new'>Add a National Park</a>
+
+<% @parks.each do |park| %>
+	<a href="parks/<%= park.id %>"><h4><%= park.name %></h4></a>
+<% end %>
